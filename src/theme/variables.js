@@ -1,0 +1,10 @@
+export const yellow = '#fdee6c';
+export const red = '#f25f5c';
+export const blue = '#247ba0';
+export const black = '#424242';
+export const LOADER_COLOR = '#515c6d';
+export const THEME_COLOR = '#38414e';
+export const TEXT_COLOR = '#000';
+export const LIGHT_THEME_COLOR = '#98a3b3'
+export const CENTRE_MARKER_COLOR = '#515c6d'
+export const WHITE_COLOR = '#fff'
