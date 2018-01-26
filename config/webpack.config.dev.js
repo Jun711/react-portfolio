@@ -37,6 +37,7 @@ module.exports = {
     // We ship a few polyfills by default:
     require.resolve('react-dev-utils/webpackHotDevClient'),
     require.resolve('./polyfills'),
+    "font-awesome-webpack!./src/theme/font-awesome.config.js",
     // Include an alternative client for WebpackDevServer. A client's job is to
     // connect to WebpackDevServer by a socket and get notified about changes.
     // When you save a file, the client will either apply hot updates (in case
