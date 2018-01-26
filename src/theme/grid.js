@@ -17,16 +17,20 @@ export const Div = styled.div`
 `;
 
 export const Container = styled(Div)`
-  padding-left: 60px;
-  padding-right: 60px;
-  ${media.phone`
-    padding-left: 10px;
-    padding-right: 10px;
-  `},
+  width: 100%;
+  right: 0;
+  left: 0;
+  margin-top: 10vh;
   ${media.tablet`
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: 7vh;  
+    right: 0;
+    left: 0;
   `}
+  ${media.phone`  
+    margin-top: 7vh;  
+    right: 0;
+    left: 0;
+  `}   
 `;
 
 export const Relative = styled(Div)`
@@ -45,7 +49,10 @@ export const Flex = styled(Div)`
   ${({ justify }) => justify && css`
     justify-content: ${justify};
   `}
-  ${({ align }) => align && css`
-    align-items: ${align};
+  ${({ alignItems }) => alignItems && css`
+    align-items: ${alignItems};
+  `}
+  ${({ alignContent }) => alignContent && css`
+    align-content: ${alignContent};   
   `}
 `;
