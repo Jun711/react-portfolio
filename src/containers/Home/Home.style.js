@@ -1,20 +1,32 @@
-import styled,  {css}  from 'styled-components';
+import styled, { css } from 'styled-components'
+import { media } from '../../theme/media'
+import { blue, yellow, red, THEME_COLOR, LIGHT_THEME_COLOR, DARK_THEME_COLOR } from '../../theme/variables';
 
 export const Image = styled.img`
   width: 100%;
 `;
 
 export const HeroImage = styled.div`
-  height: 100vh;
+  height: 60vh;
+  ${media.desktop`
+    height: 50vh;
+  `}
+  ${media.tablet`
+    height: 40vh;
+  `}
+  ${media.phone`
+    height: 30vh;
+  `}
   
-  background-image: url('${require('../../assets/adblocker.png')}');
+  background-color: ${blue};
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-content: center;
   
   text-align: center;
   color: black;
@@ -24,12 +36,15 @@ export const HeroImage = styled.div`
   h1 {
     margin: 0;
   }
-  h2 {
+  h3 {
     margin-top: 0;
   }
 `;
 
 export const RevealP = styled.p`
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
   position: relative;
   &:after {
     content: ' ';
