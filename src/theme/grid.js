@@ -56,3 +56,17 @@ export const Flex = styled(Div)`
     align-content: ${alignContent};   
   `}
 `;
+
+export const Grid = styled(Div)`
+  display: grid;
+ 
+  ${({ justify }) => justify && css`
+    justify-content: ${justify};
+  `}
+  ${({ alignItems }) => alignItems && css`
+    align-items: ${alignItems};
+  `}
+  ${({ alignContent }) => alignContent && css`
+    align-content: ${alignContent};   
+  `}
+`;
