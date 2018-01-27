@@ -14,6 +14,7 @@ export const SwissBurgerHeader = styled(Flex)`
     left: 0;
     top: 0;
     height: 7vh;
+    z-index: 99;
     background-color: ${THEME_COLOR}; 
   `}
 `;
