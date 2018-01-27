@@ -19,5 +19,3 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
   `
   return accumulator
 }, {})
-
-// export default media;
