@@ -3,7 +3,6 @@ import { Flex, Div } from '../../theme/grid';
 import { media } from "../../theme/media";
 import { red, yellow, THEME_COLOR, white, blue } from '../../theme/variables';
 
-
 export const Title = styled.h1`
   color: ${red};
   font-weight: bold;

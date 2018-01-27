@@ -6,8 +6,7 @@ class Projects extends Component {
     return (
         <ProjectContainer
           row
-          justify={'flex-start'}
-          alignContent={'flex-start'}
+          justify={'center'}
         >
           <ProjectItem>123</ProjectItem>
           <ProjectItem>456</ProjectItem>
