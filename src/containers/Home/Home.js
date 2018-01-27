@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container } from '../../theme/grid';
 import { HeroImage, Image, RevealP } from './Home.style';
-import Projects from "../../components/Projects/Projects";
+import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
+import Experience from "../../components/Experience/Experience";
 
 // const img = require('../assets/profile.png')
 // const errorImg = require('../assets/adblocker.png');
@@ -40,7 +41,8 @@ export default class Home extends Component {
           sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
           PageMaker including versions of Lorem Ipsum.
         </RevealP>
-        <Projects/>
+        <Experience/>
+        <ProjectGrid/>
       </Container>
     );
   }

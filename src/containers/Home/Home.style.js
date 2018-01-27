@@ -8,13 +8,17 @@ export const Image = styled.img`
 
 export const HeroImage = styled.div`
   height: 60vh;
+  font-size: 2em;
   ${media.desktop`
     height: 50vh;
+    font-size: 1.75em;  
   `}
   ${media.tablet`
+    font-size: 1.5em;  
     height: 40vh;
   `}
   ${media.phone`
+    font-size: 1em;  
     height: 30vh;
   `}
   
@@ -28,10 +32,8 @@ export const HeroImage = styled.div`
   justify-content: center;
   align-content: center;
   
-  text-align: center;
   color: black;
-  
-  font-size: 2em;
+
   
   h1 {
     margin: 0;
