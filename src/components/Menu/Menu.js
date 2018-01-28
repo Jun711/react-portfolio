@@ -5,7 +5,10 @@ import { menu } from './MenuItems'
 class Menu extends Component {
   renderMenu() {
     const menuItems = menu.map((menuItem) =>
-      <ListItem>{menuItem.item}</ListItem>
+      <ListItem>
+        {menuItem.link && <a target='_blank' href={menuItem.link}>{menuItem.item}</a>}
+        {!menuItem.link && menuItem.item}
+      </ListItem>
     )
     return (
       <List>

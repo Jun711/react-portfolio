@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Div, Flex } from '../../theme/grid';
-import { blue, green } from '../../theme/variables';
+import { blue, green, white } from '../../theme/variables';
 
 export const Container = styled(Flex)`
   color: ${blue};
@@ -29,12 +29,18 @@ export const ComponentContainer = styled(Div)`
 `;
 
 export const ListItem = styled.li`
-  font-size: 2em;
+  font-size: 1.5em;
   background: ${green};
   text-decoration: none;  
   border-bottom: 1px solid black;
+  color: ${white};
   &:last-of-type {
     border-bottom: 0;
+  }
+  & > a {
+    color: ${white};
+    cursor: pointer;
+    text-decoration: none;
   }
 `;
 
