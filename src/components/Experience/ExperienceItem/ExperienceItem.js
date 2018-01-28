@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
-import { ComponentContainer } from './ExperienceItem.style';
+import { ComponentContainer, ListItem, List } from './ExperienceItem.style';
 
 class ExperienceItem extends Component {
+  renderDescription(description) {
+    const languageItems = description.map((desc) =>
+      <ListItem>{desc}</ListItem>
+    )
+    return (
+      <List>
+        {languageItems}
+      </List>
+    );
+  }
+
   render() {
     return (
       <ComponentContainer>
-        {this.props.children}
+        <h3>{this.props.item.title}</h3>
+        {this.renderDescription(this.props.item.description)}
       </ComponentContainer>
     );
   }

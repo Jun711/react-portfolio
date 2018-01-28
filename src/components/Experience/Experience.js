@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ComponentContainer, ExperienceContainer } from './Experience.style';
 import ExperienceItem from './ExperienceItem/ExperienceItem'
+import { experienceItems } from './ExperienceItem/ExperienceItemDes';
 
 class Experience extends Component {
   render() {
@@ -9,11 +10,10 @@ class Experience extends Component {
         <h1>Experience</h1>
         <hr/>
         <ExperienceContainer>
-          <ExperienceItem>123</ExperienceItem>
-          <ExperienceItem>456</ExperienceItem>
-          <ExperienceItem>abc</ExperienceItem>
-          <ExperienceItem>def</ExperienceItem>
-          <ExperienceItem>ghi</ExperienceItem>
+          {experienceItems.map((item) =>
+            <ExperienceItem item={item}/>
+          )}
+
         </ExperienceContainer>
       </ComponentContainer>
     );

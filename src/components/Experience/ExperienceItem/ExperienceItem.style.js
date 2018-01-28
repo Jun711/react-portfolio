@@ -6,5 +6,20 @@ import { green, teal, yellow, THEME_COLOR, white, blue } from '../../../theme/va
 export const ComponentContainer = styled(Div)`
   background-color: ${teal};
   width: 100%; 
-  text-align: center;
+  
+  h3 {
+    margin: 0;
+  }
+`;
+
+export const ListItem = styled.li`
+  font-size: 1em;
+  line-height: 1em;
+  background: tomato;
+  text-decoration: none;  
+`;
+
+export const List = styled.ul`
+  margin-top: 0;
+  background: ${blue};
 `;

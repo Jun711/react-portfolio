@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Flex, Div, Wrapper } from '../../theme/grid';
 import { media } from "../../theme/media";
-import { red, yellow, THEME_COLOR, orange, pinkish, blue } from '../../theme/variables';
+import { red, orange, pinkish, blue } from '../../theme/variables';
 
 export const Span = styled.span`
   font-size: 1em;
