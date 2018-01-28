@@ -8,7 +8,7 @@ class Footer extends Component {
     return (socialMedia.map((contact) => (
         <div key={contact.key}>
           <a
-            target="_blank"
+            target='_blank'
             href={contact.link}>
             <i className={contact.icon}></i>
           </a>

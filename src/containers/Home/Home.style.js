@@ -9,13 +9,17 @@ export const Image = styled.img`
 export const HeroImage = styled.div`
   height: 60vh;
   font-size: 2em;
+  ${media.larger`
+    height: 45vh;
+    font-size: 1.75em;  
+  `}
   ${media.desktop`
-    height: 50vh;
+    height: 40vh;
     font-size: 1.75em;  
   `}
   ${media.tablet`
     font-size: 1.5em;  
-    height: 40vh;
+    height: 35vh;
   `}
   ${media.phone`
     font-size: 1em;  
@@ -44,7 +48,11 @@ export const HeroImage = styled.div`
 `;
 
 export const RevealP = styled.p`
-  width: 90%;
+  background: tomato;
+  width: 1170px;
+  ${media.larger`
+    width: 90vw;
+  `}
   margin: 0 auto;
   text-align: left;
   position: relative;

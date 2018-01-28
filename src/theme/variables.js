@@ -1,6 +1,9 @@
 export const yellow = '#fdee6c';
 export const red = '#f25f5c';
+export const orange = '#f48c42';
 export const blue = '#247ba0';
+export const purple = '#6e41f4';
+export const pinkish = '#f441c7';
 export const black = '#424242';
 export const gray = '#828282';
 export const teal = '#42f4dc';

@@ -3,6 +3,7 @@ import { Container } from '../../theme/grid';
 import { HeroImage, Image, RevealP } from './Home.style';
 import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
 import Experience from "../../components/Experience/Experience";
+import TechnicalSkills from "../../components/TechnicalSkills/TechnicalSkills";
 
 // const img = require('../assets/profile.png')
 // const errorImg = require('../assets/adblocker.png');
@@ -42,6 +43,7 @@ export default class Home extends Component {
           PageMaker including versions of Lorem Ipsum.
         </RevealP>
         <Experience/>
+        <TechnicalSkills/>
         <ProjectGrid/>
       </Container>
     );

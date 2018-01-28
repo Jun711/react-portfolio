@@ -19,4 +19,9 @@ injectGlobal`
     border: 2px solid ${THEME_COLOR};
     max-width: 14em;  
   }
+  
+  h3 + hr {
+    border: 2px solid ${THEME_COLOR};
+    max-width: 7em;  
+  }
 `

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Flex, Div, Grid } from '../../theme/grid';
+import { Wrapper, Flex, Div, Grid } from '../../theme/grid';
 import { media } from "../../theme/media";
 import { red, yellow, THEME_COLOR, white, blue } from '../../theme/variables';
 
@@ -9,14 +9,8 @@ export const Title = styled.h1`
   margin-top: 0;
 `;
 
-export const ProjectWrapper = styled(Div)`
+export const ProjectWrapper = styled(Wrapper)`
   background-color: ${blue};
-  width: 100%; 
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 0px;
-  }
 `;
 
 export const ProjectContainer = styled(Grid)`

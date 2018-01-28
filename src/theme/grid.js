@@ -16,6 +16,17 @@ export const Div = styled.div`
   `}
 `;
 
+export const Wrapper = styled(Div)`
+  width: 100%;
+  right: 0;
+  left: 0;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+`;
+
 export const Container = styled(Div)`
   width: 100%;
   right: 0;
