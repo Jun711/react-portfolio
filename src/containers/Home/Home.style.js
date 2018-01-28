@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { media } from '../../theme/media'
-import { blue, yellow, red, THEME_COLOR, LIGHT_THEME_COLOR, DARK_THEME_COLOR } from '../../theme/variables';
+import { blue } from '../../theme/variables';
 
 export const Image = styled.img`
   width: 100%;
@@ -46,7 +46,7 @@ export const ProfileCard = styled.div`
   }
 `;
 
-export const RevealP = styled.p`
+export const P = styled.p`
   background: tomato;
   width: 1170px;
   ${media.larger`
@@ -55,22 +55,4 @@ export const RevealP = styled.p`
   margin: 0 auto;
   text-align: left;
   position: relative;
-  &:after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    transform-origin: left;
-    transform: rotateY(90deg);
-    transition: transform 1s;
-  }
-  ${({hide}) => hide && css`
-
-    &:after {
-      transform: rotateY(0deg);
-    }
-  `}
 `;
