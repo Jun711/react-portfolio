@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavigationContainer, NavItem, NavItemA } from './NavigationBar.style';
 
+
 class NavigationBar extends Component {
   render() {
     return (
@@ -12,7 +13,7 @@ class NavigationBar extends Component {
         <NavItem to='/'>About</NavItem>
         <NavItem to='projects'>Projects</NavItem>
         <NavItem>Experience</NavItem>
-        <NavItem>Contact</NavItem>
+        <NavItemA target='_blank' href={'../../assets/doc/JunResume.pdf'}>Resume</NavItemA>
         <NavItemA target='_blank' href={'http://www.language-diary.com/'}>Blog</NavItemA>
       </NavigationContainer>
     );
