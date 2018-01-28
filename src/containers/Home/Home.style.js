@@ -6,7 +6,7 @@ export const Image = styled.img`
   width: 100%;
 `;
 
-export const HeroImage = styled.div`
+export const ProfileCard = styled.div`
   height: 60vh;
   font-size: 2em;
   ${media.larger`
@@ -27,7 +27,6 @@ export const HeroImage = styled.div`
   `}
   
   background-color: ${blue};
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   

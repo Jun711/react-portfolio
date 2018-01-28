@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Container } from '../../theme/grid';
-import { HeroImage, Image, RevealP } from './Home.style';
+import { ProfileCard } from './Home.style';
 import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
 import Experience from "../../components/Experience/Experience";
 import TechnicalSkills from "../../components/TechnicalSkills/TechnicalSkills";
 
-// const img = require('../assets/profile.png')
-// const errorImg = require('../assets/adblocker.png');
 
 export default class Home extends Component {
   static propTypes = {}
@@ -28,10 +26,10 @@ export default class Home extends Component {
   render() {
     return (
       <Container>
-        <HeroImage>
+        <ProfileCard>
           <h1>Jun Goh</h1>
           <h3>Software Developer</h3>
-        </HeroImage>
+        </ProfileCard>
         <h1>What'sup Home?</h1>
         <h2>Y What'sup Homieee? hot</h2>
         <RevealP hide={false}>

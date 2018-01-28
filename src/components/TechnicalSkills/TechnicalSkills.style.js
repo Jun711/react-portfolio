@@ -1,12 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Flex, Div, Wrapper } from '../../theme/grid';
 import { media } from "../../theme/media";
 import { red, orange, pinkish, blue } from '../../theme/variables';
-
-export const Span = styled.span`
-  font-size: 1em;
-  vertical-align: middle;
-`;
 
 export const ListItem = styled.li`
   font-size: 1em;
@@ -63,7 +58,6 @@ export const SkillSet = styled(Div)`
   font-size: 1em;
   text-align: center;
   vertical-align: middle;
-  
   position: relative; 
   display: block;   
 `;

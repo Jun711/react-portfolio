@@ -10,7 +10,7 @@ export const NavigationContainer = styled(Flex)`
   left: 0;
   top: 0;
   height: 10vh;
-  z-index: 99; 
+  z-index: 99;    
   background-color: ${THEME_COLOR};
   ${media.tablet`
     display: none;
@@ -21,7 +21,7 @@ export const NavItem = styled(Link)`
   margin-right: 20px;
   font-size: 1.3em;
   cursor: pointer;
-  color: ${white};
+  color: ${white};  
   position: relative;
   text-decoration: none;
   &:hover {
@@ -58,7 +58,7 @@ export const NavItemA = styled.a`
       height: 100%;
       background-color: ${white};
       z-index: -1; 
-      transform: scale(1.3, 1.7);
+      transform: scale(1.2, 1.7);
     }
   }
 `;
