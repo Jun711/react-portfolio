@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Flex, Div, Wrapper } from '../../theme/grid';
 import { media } from "../../theme/media";
-import { red, orange, pinkish, blue } from '../../theme/variables';
+import { red, orange, yellow, blue, black } from '../../theme/variables';
 
 export const ListItem = styled.li`
   font-size: 1em;
@@ -52,7 +52,7 @@ export const TechnicalSkillContainer = styled(Flex)`
 export const SkillSet = styled(Div)`
   height: 450px;
   width: 450px;
-  background-color: ${pinkish};
+  background-color: ${yellow};
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -60,4 +60,8 @@ export const SkillSet = styled(Div)`
   vertical-align: middle;
   position: relative; 
   display: block;   
+  
+  h3 {
+    color: ${black};
+  }
 `;

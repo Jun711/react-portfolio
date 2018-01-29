@@ -13,9 +13,11 @@ injectGlobal`
   
   h1, h2, h3 {
     text-align: center;
+    margin-bottom: 0;
   }
   
   hr {
+    margin-top: 0;
     border: 2px solid ${THEME_COLOR};
     max-width: 14em;  
   }
