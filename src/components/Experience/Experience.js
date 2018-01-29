@@ -11,7 +11,7 @@ class Experience extends Component {
         <hr/>
         <ExperienceContainer>
           {experienceItems.map((item) =>
-            <ExperienceItem item={item}/>
+            <ExperienceItem key={item.key} item={item}/>
           )}
 
         </ExperienceContainer>

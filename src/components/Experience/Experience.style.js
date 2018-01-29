@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Flex, Div } from '../../theme/grid';
 import { media } from '../../theme/media';
-import { green, pinkish, yellow, THEME_COLOR, white, blue } from '../../theme/variables';
+import { green, pink, yellow, THEME_COLOR, white, blue } from '../../theme/variables';
 
 export const ComponentContainer = styled(Div)`
   background-color: ${green};
@@ -13,7 +13,7 @@ export const ComponentContainer = styled(Div)`
 `;
 
 export const ExperienceContainer = styled(Div)`
- background-color: ${pinkish};
+ background-color: ${pink};
   margin: 0 auto;   
   width: 1170px;
   ${media.larger`

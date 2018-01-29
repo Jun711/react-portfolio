@@ -3,8 +3,8 @@ import { ComponentContainer, ListItem, List } from './ExperienceItem.style';
 
 class ExperienceItem extends Component {
   renderDescription(description) {
-    const languageItems = description.map((desc) =>
-      <ListItem>{desc}</ListItem>
+    const languageItems = description.map((desc, index) =>
+      <ListItem key={index}>{desc}</ListItem>
     )
     return (
       <List>
