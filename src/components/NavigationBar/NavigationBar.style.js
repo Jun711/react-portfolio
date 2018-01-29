@@ -19,13 +19,21 @@ export const NavigationContainer = styled(Flex)`
 
 export const NavItem = styled(Link)`
   margin-right: 20px;
+  
   font-size: 1.3em;
   cursor: pointer;
   color: ${white};  
+  
   position: relative;
+  line-height: 1.3em;
   text-decoration: none;
+ 
   &:hover {
     color: ${blue};
+    &:before {
+      left: 1px;
+      opacity: 1;
+    }
     &:after {
       content: ' ';
       position: absolute;
@@ -42,13 +50,31 @@ export const NavItem = styled(Link)`
 
 export const NavItemA = styled.a`
   margin-right: 20px;
+  &:last-of-type {
+    padding-right: 30px;
+  }
   font-size: 1.3em;
+  background-color: ${red};
   cursor: pointer;
   color: ${white};
   position: relative;
   text-decoration: none;
+  &:last-of-type:before {
+    font-family: FontAwesome;
+    content:'\\f09e';
+    position: absolute;
+    opacity: 0;
+    top: 5px;
+    vertical-align: middle;
+    right: -30px;
+    transition: all 200ms ease;
+  }
   &:hover {
     color: ${blue};
+    &:last-of-type:before {
+      right: 1px;
+      opacity: 1;
+    }
     &:after {
       content: ' ';
       position: absolute;
