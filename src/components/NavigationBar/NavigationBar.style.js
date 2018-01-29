@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Flex, Div } from '../../theme/grid';
-import { blue, yellow, white, red, THEME_COLOR } from '../../theme/variables';
-import { Link } from 'react-router';
+import { Flex } from '../../theme/grid';
+import { blue, red, THEME_COLOR, white } from '../../theme/variables';
+import { Link } from 'react-scroll';
 import { media } from '../../theme/media';
 
 export const NavigationContainer = styled(Flex)`
@@ -9,9 +9,10 @@ export const NavigationContainer = styled(Flex)`
   right: 0;
   left: 0;
   top: 0;
-  height: 10vh;
+  height: 3.5em;
   z-index: 99;    
   background-color: ${THEME_COLOR};
+ 
   ${media.tablet`
     display: none;
   `}
@@ -54,7 +55,7 @@ export const NavItemA = styled.a`
     padding-right: 30px;
   }
   font-size: 1.3em;
-  background-color: ${red};
+  line-height: 1.3em;
   cursor: pointer;
   color: ${white};
   position: relative;
@@ -64,7 +65,6 @@ export const NavItemA = styled.a`
     content:'\\f09e';
     position: absolute;
     opacity: 0;
-    top: 5px;
     vertical-align: middle;
     right: -30px;
     transition: all 200ms ease;

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { Container, List, ListItem, ComponentContainer, Background } from './Menu.style';
+import { Background, ComponentContainer, Container, List, ListItem } from './Menu.style';
 import { menu } from './MenuItems'
+import { Link } from 'react-scroll';
 
 class Menu extends Component {
   renderMenu() {
     const menuItems = menu.map((menuItem) =>
-      <ListItem>
+      <ListItem key={menuItem.key}>
+        {menuItem.file && <a target='_blank' href={process.env.PUBLIC_URL + `${menuItem.file}`}>{menuItem.item}</a>}
         {menuItem.link && <a target='_blank' href={menuItem.link}>{menuItem.item}</a>}
-        {!menuItem.link && menuItem.item}
+        {!menuItem.link && !menuItem.file && <Link {...this.props.scrollConfig} to={menuItem.key}>{menuItem.item}</Link>}
       </ListItem>
     )
     return (

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { menuBackground, backgroundColor } from '../../theme/variables';
-import { SwissBurgerHeader, SwissBurgerBun, BurgerSlice } from './SwissBurger.style'
-import Menu from '../Menu/Menu'
+import { backgroundColor, menuBackground } from '../../theme/variables';
+import { BurgerSlice, SwissBurgerBun, SwissBurgerHeader } from './SwissBurger.style';
+import Menu from '../Menu/Menu';
 import { Div } from '../../theme/grid';
 
 class SwissBurger extends Component {
@@ -14,6 +14,7 @@ class SwissBurger extends Component {
       menuSwitch: false,
     }
   }
+
   _burgerClick(evt) {
     console.log('burgerClick evt:', evt)
     this.setState({
@@ -23,6 +24,7 @@ class SwissBurger extends Component {
       menuSwitch: !this.state.menuSwitch
     })
   }
+
   render() {
     return (
       <Div>
@@ -37,7 +39,10 @@ class SwissBurger extends Component {
             <BurgerSlice bar3={this.state.bar3}></BurgerSlice>
           </SwissBurgerBun>
         </SwissBurgerHeader>
-        <Menu menuSwitch={this.state.menuSwitch}/>
+        <Menu
+          scrollConfig={this.props.scrollConfig}
+          menuSwitch={this.state.menuSwitch}
+        />
       </Div>
     );
   }

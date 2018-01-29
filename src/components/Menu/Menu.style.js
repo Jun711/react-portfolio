@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
 import { Div, Flex } from '../../theme/grid';
 import { blue, green, white } from '../../theme/variables';
+import { Link } from 'react-scroll';
 
 export const Container = styled(Flex)`
   color: ${blue};
-  top: 7vh;
+  top: 3em;
   position: fixed;
   width: 100vw;
   left: 0;
@@ -18,14 +19,48 @@ export const Container = styled(Flex)`
     margin-top: 25px;
   }
 
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, opacity 1s linear;
+  
   ${({hide}) => hide && css`
+    opacity: 0;
     transform: translateY(-100%);
   `}
 `;
 
 export const ComponentContainer = styled(Div)`
   width: 100%; 
+`;
+
+
+export const NavItem = styled(Link)`
+  margin-right: 20px;
+  
+  font-size: 1.3em;
+  cursor: pointer;
+  color: ${white};  
+  
+  position: relative;
+  line-height: 1.3em;
+  text-decoration: none;
+ 
+  &:hover {
+    color: ${blue};
+    &:before {
+      left: 1px;
+      opacity: 1;
+    }
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: ${white};
+      z-index: -1; 
+      transform: scale(1.2, 1.7);
+    }
+  }
 `;
 
 export const ListItem = styled.li`

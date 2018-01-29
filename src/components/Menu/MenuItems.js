@@ -1,23 +1,27 @@
 export const menu = [
   {
-    'key': 0,
-    'item': 'About'
+    'key': 'profileCard',
+    'item': 'About',
   },
   {
-    'key': 0,
-    'item': 'Projects'
-  },
-  {
-    'key': 0,
+    'key': 'experience',
     'item': 'Experience',
   },
   {
-    'key': 0,
-    'item': 'Resume',
-    'link': '../../assets/doc/resume.pdf'
+    'key': 'projects',
+    'item': 'Projects'
   },
   {
-    'key': 0,
+    'key': 'contact',
+    'item': 'Contact',
+  },
+  {
+    'key': 'resume',
+    'item': 'Resume',
+    'file': '/JunResume.pdf'
+  },
+  {
+    'key': 'blog',
     'item': 'Blog',
     'link': 'http://www.language-diary.com'
   }
