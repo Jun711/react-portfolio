@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ComponentContainer, ExperienceContainer } from './Experience.style';
 import ExperienceItem from './ExperienceItem/ExperienceItem'
-import { experienceItems } from './ExperienceItem/ExperienceItemDes';
+import { experienceItems } from './ExperienceItem/ExperienceItemDes.data';
 
 class Experience extends Component {
   render() {
@@ -13,7 +13,6 @@ class Experience extends Component {
           {experienceItems.map((item) =>
             <ExperienceItem key={item.key} item={item}/>
           )}
-
         </ExperienceContainer>
       </ComponentContainer>
     );

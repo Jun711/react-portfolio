@@ -8,6 +8,8 @@ export const experienceItems = [
       'Developed an iOS/Android chat app using Angular2, Typescript, Cordova and Ionic',
       'Implemented UI components such user sign-in, audio recording, emoticon input and call log',
       'Used WebSockets over xmpp protocols for messaging and WebRTC for audio stream',
+      'Utilized sentry.io to track and identify errors happening on users\' apps',
+      'Managed server log via Papertrail to identify and fix bugs',
       'Configured webpack and fastlane to automate build process',
       'Languages and Tools: JavaScript, rxjs, lodash, xmpp, REST, Webstorm, Terminal, Vim'
     ]
