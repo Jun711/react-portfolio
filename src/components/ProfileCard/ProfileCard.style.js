@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { media } from '../../theme/media'
-import { green, LIGHT_THEME_COLOR, white, THEME_COLOR, DARK_THEME_COLOR } from '../../theme/variables';
+import { green, white } from '../../theme/variables';
 
 export const Image = styled.img`
   width: 100%;
@@ -33,12 +33,9 @@ export const Title = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  ${media.tablet`
-    justify-content: flex-start;
-  `}
   align-content: center;
   
-  color: ${THEME_COLOR};
+  color: ${white};
 
   h1 {
     margin: 0;

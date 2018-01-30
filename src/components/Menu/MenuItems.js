@@ -1,9 +1,5 @@
 export const menu = [
   {
-    'key': 'profileCard',
-    'item': 'About',
-  },
-  {
     'key': 'experience',
     'item': 'Experience',
   },

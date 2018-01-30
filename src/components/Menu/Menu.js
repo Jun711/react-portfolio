@@ -9,7 +9,8 @@ class Menu extends Component {
       <ListItem key={menuItem.key}>
         {menuItem.file && <a target='_blank' href={process.env.PUBLIC_URL + `${menuItem.file}`}>{menuItem.item}</a>}
         {menuItem.link && <a target='_blank' href={menuItem.link}>{menuItem.item}</a>}
-        {!menuItem.link && !menuItem.file && <Link {...this.props.scrollConfig} to={menuItem.key}>{menuItem.item}</Link>}
+        {!menuItem.link && !menuItem.file &&
+        <Link {...this.props.scrollConfig} to={menuItem.key}>{menuItem.item}</Link>}
       </ListItem>
     )
     return (

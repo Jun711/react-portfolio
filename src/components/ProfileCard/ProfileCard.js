@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from '../../theme/grid';
 import { Title } from './ProfileCard.style';
-import Network from "../Network/Network";
+import Network from '../SocialMedia/Network';
 
 class ProfileCard extends Component {
 

@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Div, Flex } from '../../theme/grid';
-import { blue, green, white } from '../../theme/variables';
-import { Link } from 'react-scroll';
+import { blue, themeColor, white } from '../../theme/variables';
 
 export const Container = styled(Flex)`
   color: ${blue};
@@ -9,7 +8,7 @@ export const Container = styled(Flex)`
   position: fixed;
   width: 100vw;
   left: 0;
-  opacity: 1;
+  opacity: 0.9;
   justify-content: center;
   flex-direction: column;
   z-index: 98;
@@ -31,43 +30,13 @@ export const ComponentContainer = styled(Div)`
   width: 100%; 
 `;
 
-
-export const NavItem = styled(Link)`
-  margin-right: 20px;
-  
-  font-size: 1.3em;
-  cursor: pointer;
-  color: ${white};  
-  
-  position: relative;
-  line-height: 1.3em;
-  text-decoration: none;
- 
-  &:hover {
-    color: ${blue};
-    &:before {
-      left: 1px;
-      opacity: 1;
-    }
-    &:after {
-      content: ' ';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: ${white};
-      z-index: -1; 
-      transform: scale(1.2, 1.7);
-    }
-  }
-`;
-
 export const ListItem = styled.li`
   font-size: 1.5em;
-  background: ${green};
+  line-height: 1.5em;
+  background: ${themeColor};
   text-decoration: none;  
   border-bottom: 1px solid black;
+  box-sizing: border-box;
   color: ${white};
   &:last-of-type {
     border-bottom: 0;
