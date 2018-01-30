@@ -8,7 +8,10 @@ class Contact extends Component {
         <h1>Contact</h1>
         <hr/>
         <Line>
-          <a href='mailto:cygoh@umich.edu'>Email Jun at cygoh@umich.edu</a>
+          <a href='mailto:cygoh@umich.edu'>Write me at <span>cygoh@umich.edu</span></a>
+        </Line>
+        <Line>
+          <a href='mailto:cygoh@umich.edu'>Visit my blog at <span>www.language-diary.com</span></a>
         </Line>
       </ComponentContainer>
     );

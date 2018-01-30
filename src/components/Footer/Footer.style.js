@@ -1,14 +1,22 @@
 import styled from 'styled-components';
-import { Flex, Div } from '../../theme/grid';
-import { blue, yellow, white, red, THEME_COLOR } from '../../theme/variables';
-import { Link } from 'react-router';
+import { Flex } from '../../theme/grid';
+import { blue, themeColor, white } from '../../theme/variables';
+
+export const SocialMediaContainer = styled(Flex)`
+  h3 {
+    margin-top: 0;
+    color: ${white};
+  }
+  
+`;
 
 export const FooterContainer = styled(Flex)`
+  flex-wrap: wrap; 
   right: 0;
   left: 0;
   bottom: 0;
-  height: 20vh;
-  background-color: ${THEME_COLOR};
+  height: 11em;
+  background-color: ${themeColor};
   align-content: center;
   align-items: center;
   
@@ -25,7 +33,6 @@ export const FooterContainer = styled(Flex)`
   }
   
   a {
-    
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -36,10 +43,11 @@ export const FooterContainer = styled(Flex)`
     text-align: center;
     vertical-align: middle;
     color: white;
-    transition: background-color .3s ease-in-out
+    transition: background-color .3s ease-in-out;
   }
   a:hover {
     background-color: ${white};
     color: ${blue};
   }
 `;
+

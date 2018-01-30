@@ -1,22 +1,8 @@
 import React, { Component } from 'react';
-import { FooterContainer } from './Footer.style';
-import { socialMedia } from './Contacts';
+import { FooterContainer, SocialMediaContainer } from './Footer.style';
+import Network from '../SocialMedia/Network';
 
 class Footer extends Component {
-
-  renderContactList() {
-    return (socialMedia.map((contact) => (
-        <div key={contact.key}>
-          <a
-            target='_blank'
-            href={contact.link}>
-            <i className={contact.icon}></i>
-          </a>
-        </div>
-      ))
-    )
-  }
-
   render() {
     return (
       <FooterContainer
@@ -24,7 +10,13 @@ class Footer extends Component {
         justify={'center'}
         align={'center'}
       >
-        {this.renderContactList()}
+        <SocialMediaContainer
+          column
+          justify={'center'}
+        >
+          <h3>Connect with me:</h3>
+          <Network/>
+        </SocialMediaContainer>
       </FooterContainer>
     );
   }

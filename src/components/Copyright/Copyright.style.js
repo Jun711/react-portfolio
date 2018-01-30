@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 import { Div, Flex } from '../../theme/grid';
-import { charcoal, white } from '../../theme/variables';
+import { charcoal, green, white } from '../../theme/variables';
 
 export const Line = styled(Div)`
   color: ${white};
   font-size: 1em;
   font-weight: 100;  
   margin: 0 auto;
+  
+  &:hover {
+    color: ${green};
+  }
 `;
 
 export const Container = styled(Flex)`
