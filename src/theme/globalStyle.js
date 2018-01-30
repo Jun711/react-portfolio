@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import { THEME_COLOR, charcoal } from "./variables";
+import { themeColor, charcoal } from "./variables";
 
 /* eslint-disabled */
 injectGlobal`
@@ -9,8 +9,9 @@ injectGlobal`
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
-    font-color: ${charcoal};
+    color: ${themeColor};
     height: 100%;
+    letter-spacing: 0.0625em;
   }
   
   h1, h2, h3 {
@@ -32,20 +33,26 @@ injectGlobal`
   
   hr {
     margin: 25px auto;
-    border: 2px solid ${THEME_COLOR};
+    border: 2px solid ${themeColor};
     max-width: 14em;  
   }
   
   h3 + hr {
     margin: 25px auto;
-    border: 2px solid ${THEME_COLOR};
+    border: 2px solid ${themeColor};
     max-width: 7em;  
   }
   
   li {
     letter-spacing: 0.0625em;
+    line-height: 1.7em;
+    font-size: 17px;
+  }
+  
+  p {
+    letter-spacing: 0.0625em;
     line-height: 1.5em;
-    font-size: 16px;
+    font-size: 20px;
   }
   
   .active {

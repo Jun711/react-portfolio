@@ -2,16 +2,16 @@ import styled, { css } from 'styled-components';
 import { media } from './media';
 
 export const Div = styled.div`
-  ${({ marginBottom }) => marginBottom && css`
+  ${({marginBottom}) => marginBottom && css`
     margin-bottom: ${marginBottom};
   `}
-  ${({ marginLeft }) => marginLeft && css`
+  ${({marginLeft}) => marginLeft && css`
     margin-left: ${marginLeft};
   `}
-  ${({ marginRight }) => marginRight && css`
+  ${({marginRight}) => marginRight && css`
     margin-right: ${marginRight};
   `}
-  ${({ marginTop }) => marginTop && css`
+  ${({marginTop}) => marginTop && css`
     margin-top: ${marginTop};
   `}
 `;
@@ -20,11 +20,8 @@ export const Wrapper = styled(Div)`
   width: 100%;
   right: 0;
   left: 0;
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 0px;
-  }
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
 `;
 
 export const Container = styled(Div)`
@@ -54,16 +51,16 @@ export const Flex = styled(Div)`
   ${({row}) => row && css`
     flex-direction: row;
   `}
-  ${({ column }) => column && css`
+  ${({column}) => column && css`
     flex-direction: column;
   `}
-  ${({ justify }) => justify && css`
+  ${({justify}) => justify && css`
     justify-content: ${justify};
   `}
-  ${({ alignItems }) => alignItems && css`
+  ${({alignItems}) => alignItems && css`
     align-items: ${alignItems};
   `}
-  ${({ alignContent }) => alignContent && css`
+  ${({alignContent}) => alignContent && css`
     align-content: ${alignContent};   
   `}
 `;
@@ -71,13 +68,29 @@ export const Flex = styled(Div)`
 export const Grid = styled(Div)`
   display: grid;
  
-  ${({ justify }) => justify && css`
+  ${({justify}) => justify && css`
     justify-content: ${justify};
   `}
-  ${({ alignItems }) => alignItems && css`
+  ${({alignItems}) => alignItems && css`
     align-items: ${alignItems};
   `}
-  ${({ alignContent }) => alignContent && css`
+  ${({alignContent}) => alignContent && css`
     align-content: ${alignContent};   
+  `}
+`;
+
+export const FixWidthContainer = styled(Div)`
+  margin: 0 auto;
+  width: 1100px;
+  ${media.larger`
+    width: 90vw;
+  `}
+`;
+
+export const FixWidthFlexContainer = styled(Flex)`
+  margin: 0 auto;
+  width: 1100px;
+  ${media.larger`
+    width: 90vw;
   `}
 `;
