@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from '../../theme/grid';
-import TextBox from '../../components/TextBox/TextBox';
+import { HomeContainer } from './Home.style';
 
 export default class Home extends Component {
   static propTypes = {}
@@ -20,10 +19,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <Container>
-        <TextBox/>
+      <HomeContainer>
         {this.props.children}
-      </Container>
+      </HomeContainer>
     );
   }
 }
