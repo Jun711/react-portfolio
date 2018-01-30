@@ -1,42 +1,45 @@
 import styled from 'styled-components'
 import { media } from '../../theme/media'
-import { blue } from '../../theme/variables';
+import { green, LIGHT_THEME_COLOR, white, THEME_COLOR, DARK_THEME_COLOR } from '../../theme/variables';
 
 export const Image = styled.img`
   width: 100%;
 `;
 
 export const Title = styled.div`
-  height: 60vh;
+  height: 13em;
   font-size: 2em;
   ${media.larger`
-    height: 45vh;
+    height: 12em;
     font-size: 1.75em;  
   `}
   ${media.desktop`
-    height: 40vh;
+    height: 12em;
     font-size: 1.75em;  
   `}
   ${media.tablet`
+    height: 11em;
     font-size: 1.5em;  
-    height: 35vh;
   `}
   ${media.phone`
+    height: 11em;
     font-size: 1em;  
-    height: 30vh;
   `}
   
-  background-color: ${blue};
+  background-color: ${green};
   background-size: cover;
   background-position: center;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
+  ${media.tablet`
+    justify-content: flex-start;
+  `}
   align-content: center;
   
-  color: black;
-s
+  color: ${THEME_COLOR};
+
   h1 {
     margin: 0;
   }

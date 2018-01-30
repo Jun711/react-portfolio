@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from '../../theme/grid';
 import { Title } from './ProfileCard.style';
+import Network from "../Network/Network";
 
 class ProfileCard extends Component {
 
@@ -10,6 +11,7 @@ class ProfileCard extends Component {
         <Title>
           <h1>Jun Goh</h1>
           <h3>Software Developer</h3>
+          <Network/>
         </Title>
       </Container>
     )
