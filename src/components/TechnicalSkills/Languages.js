@@ -6,32 +6,32 @@ export const languages = [
   },
   {
     'key': 'CSS',
-    'lang': 'CSS3/SASS/StyledComponents',
+    'lang': 'CSS3 / SASS / StyledComponents',
     'experience': '3 years'
   },
   {
     'key': 'JS',
-    'lang': 'JavaScript',
+    'lang': 'JavaScript ES5 / ES6+',
     'experience': '3 years'
   },
   {
     'key': 'Angular',
-    'lang': 'Angular2/4',
+    'lang': 'Angular2 / 4',
     'experience': '1 year'
   },
   {
     'key': 'React',
-    'lang': 'ReactJS+Redux',
+    'lang': 'ReactJS + Redux',
     'experience': '1 year'
   },
   {
     'key': 'ReactNative',
-    'lang': 'ReactNative+Redux',
+    'lang': 'ReactNative + Redux',
     'experience': '1 year'
   },
   {
     'key': 'NodeJS',
-    'lang': 'NodesJS+Express',
+    'lang': 'NodesJS + Express',
     'experience': '1 year'
   },
   {

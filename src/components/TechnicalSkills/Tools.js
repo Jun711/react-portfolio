@@ -1,35 +1,15 @@
 export const tools = [
   {
+    'key': 'Jest',
+    'name': 'Testing: Jest, Mocha, Chai',
+  },
+  {
     'key': 'Git',
     'name': 'Github + SourceTree',
   },
   {
-    'key': 'Terminal',
-    'name': 'Terminal',
-  },
-  {
-    'key': 'WebStorm',
-    'name': 'WebStorm',
-  },
-  {
-    'key': 'Sublime',
-    'name': 'Sublime',
-  },
-  {
-    'key': 'Vim',
-    'name': 'Vim',
-  },
-  {
-    'key': 'Jira',
-    'name': 'Jira',
-  },
-  {
-    'key': 'Trello',
-    'name': 'Trello',
-  },
-  {
     'key': 'MongoDB',
-    'name': 'MongoDB',
+    'name': 'MongoDB + mlab',
   },
   {
     'key': 'npm',
@@ -42,5 +22,29 @@ export const tools = [
   {
     'key': 'Babel',
     'name': 'Babel',
+  },
+  {
+    'key': 'Terminal',
+    'name': 'Terminal + zshrc',
+  },
+  {
+    'key': 'Vim',
+    'name': 'Vim',
+  },
+  {
+    'key': 'WebStorm',
+    'name': 'WebStorm',
+  },
+  {
+    'key': 'Sublime',
+    'name': 'Sublime',
+  },
+  {
+    'key': 'Jira',
+    'name': 'Jira',
+  },
+  {
+    'key': 'Trello',
+    'name': 'Trello',
   },
 ]

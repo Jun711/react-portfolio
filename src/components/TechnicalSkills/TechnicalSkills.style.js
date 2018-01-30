@@ -1,17 +1,12 @@
 import styled from 'styled-components';
-import { Flex, Div, Wrapper } from '../../theme/grid';
+import { Div, Flex, Wrapper } from '../../theme/grid';
 import { media } from "../../theme/media";
-import { red, orange, yellow, blue, black } from '../../theme/variables';
 
 export const ListItem = styled.li`
-  font-size: 1em;
-  line-height: 1em;
   height: 20px;
-  background: tomato;
 `;
 
 export const ListGrid = styled.ul`
-  background: ${blue};
   display: grid;
   grid-gap: 0.5em;
   grid-template-columns: fit-content(45vw);
@@ -21,28 +16,19 @@ export const ListGrid = styled.ul`
   justify-content: center;
   align-content: center;
   list-style: none;
-  overflow: visible;
   margin: 0;
   padding: 0;
 `;
 
 export const TechnicalSkillWrapper = styled(Wrapper)`
-  background-color: ${orange};;
 `;
 
 export const TechnicalSkillContainer = styled(Flex)`
   padding: 0;
   margin: 0;
   flex-wrap: wrap; 
-  background-color: ${red};
-  width: 1170px;
+  width: 1100px;
   margin: 0 auto;   
-  
-  h3 {
-    text-align: center;
-    margin: 0;
-    font-size: 1em;
-  }
   
   ${media.larger`
     width: 90vw;
@@ -50,18 +36,10 @@ export const TechnicalSkillContainer = styled(Flex)`
 `;
 
 export const SkillSet = styled(Div)`
-  height: 450px;
   width: 450px;
-  background-color: ${yellow};
-  color: white;
   font-weight: bold;
-  font-size: 1em;
   text-align: center;
   vertical-align: middle;
   position: relative; 
   display: block;   
-  
-  h3 {
-    color: ${black};
-  }
 `;
