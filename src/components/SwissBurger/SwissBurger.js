@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { backgroundColor, menuBackground } from '../../theme/variables';
 import { BurgerSlice, SwissBurgerBun, SwissBurgerHeader } from './SwissBurger.style';
 import Menu from '../Menu/Menu';
-import { Div } from '../../theme/grid';
+import { Div, Flex } from '../../theme/grid';
+import Name from '../Name/Name';
 
 class SwissBurger extends Component {
   constructor(props) {
@@ -29,15 +30,24 @@ class SwissBurger extends Component {
     return (
       <Div>
         <SwissBurgerHeader
-          justify={'flex-end'}
+          row
+          justify={'space-between'}
           alignItems={'center'}
-          onClick={this._burgerClick.bind(this)}
         >
-          <SwissBurgerBun>
-            <BurgerSlice bar1={this.state.bar1}></BurgerSlice>
-            <BurgerSlice bar2={this.state.bar2}></BurgerSlice>
-            <BurgerSlice bar3={this.state.bar3}></BurgerSlice>
-          </SwissBurgerBun>
+          <Name/>
+          <Flex
+            row
+            justify={'flex-end'}
+            alignItems={'center'}
+            onClick={this._burgerClick.bind(this)}
+          >
+            <SwissBurgerBun>
+              <BurgerSlice bar1={this.state.bar1}></BurgerSlice>
+              <BurgerSlice bar2={this.state.bar2}></BurgerSlice>
+              <BurgerSlice bar3={this.state.bar3}></BurgerSlice>
+            </SwissBurgerBun>
+          </Flex>
+
         </SwissBurgerHeader>
         <Menu
           scrollConfig={this.props.scrollConfig}
