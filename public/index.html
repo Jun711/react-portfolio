@@ -21,12 +21,15 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="Hi, this is Jun, a software developer based in Vancouver. This webpage showcases my recent projects, experience and skillset.">
     <meta name="twitter:title" content="Jun Goh - Software Developer">
-    <meta name="twitter:creator" content="Jun Goh">
-    <meta property="twitter:url" content="https://jun711.github.io/react-portfolio/">
-    <meta property="twitter:image" content="https://jun711.github.io/react-portfolio/webpage-cover.jpg">
+    <meta name="twitter:creator" content="@Juny_g711">
+    <meta name="twitter:site" content="@Juny_g711">
+    <meta name="twitter:image" content="https://jun711.github.io/react-portfolio/webpage-cover.jpg">
     <meta name="twitter:image:alt" content="Jun Goh - Software Developer">
-    <meta name="twitter:image:width" content="1309">
-    <meta name="twitter:image:height" content="874">
+    <meta name="twitter:image:width" content="1437">
+    <meta name="twitter:image:height" content="924">
+    <meta itemprop="name" content="Jun Goh - Software Developer">
+    <meta itemprop="description" content="Hi, this is Jun, a software developer based in Vancouver. This webpage showcases my recent projects, experience and skillset.">
+    <meta itemprop="image" content="https://jun711.github.io/react-portfolio/webpage-cover.jpg">
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -43,10 +46,12 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   </head>
-  <body>
+  <body  itemscope itemtype="http://schema.org/Product">
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <img itemprop="image" style="display: none" src="%PUBLIC_URL%/webpage-cover.jpg" />
+    <p itemprop="description" style="display: none">Hi, this is Jun, a software developer based in Vancouver. This webpage showcases my recent projects, experience and skillset.</p>
     <div id="root"></div>
     <!--
       This HTML file is a template.
