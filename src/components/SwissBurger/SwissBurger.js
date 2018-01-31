@@ -34,14 +34,16 @@ class SwissBurger extends Component {
           justify={'space-between'}
           alignItems={'center'}
         >
-          <Name/>
+          <Name
+            scrollConfig={{...this.props.scrollConfig,  offset: -84}}
+          />
           <Flex
             row
             justify={'flex-end'}
             alignItems={'center'}
             onClick={this._burgerClick.bind(this)}
           >
-            <SwissBurgerBun>
+            <SwissBurgerBun bun={this.state.bar1}>
               <BurgerSlice bar1={this.state.bar1}></BurgerSlice>
               <BurgerSlice bar2={this.state.bar2}></BurgerSlice>
               <BurgerSlice bar3={this.state.bar3}></BurgerSlice>
