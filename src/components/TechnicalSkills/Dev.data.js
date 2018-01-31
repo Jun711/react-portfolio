@@ -1,4 +1,4 @@
-export const languages = [
+export const webDev = [
   {
     'key': 'HTML',
     'lang': 'HTML5',
@@ -11,7 +11,7 @@ export const languages = [
   },
   {
     'key': 'JS',
-    'lang': 'JavaScript ES5 / ES6+',
+    'lang': 'JavaScript ES6+',
     'experience': '3 years'
   },
   {
@@ -24,11 +24,27 @@ export const languages = [
     'lang': 'ReactJS + Redux',
     'experience': '1 year'
   },
+]
+
+export const mobileDev = [
+  {
+    'key': 'Cordova',
+    'lang': 'Cordova + Ionic / Angular2',
+    'experience': '1 year'
+  },
   {
     'key': 'ReactNative',
     'lang': 'ReactNative + Redux',
-    'experience': '1 year'
+    'experience': '4 months'
   },
+  {
+    'key': 'Swift',
+    'lang': 'Swift',
+    'experience': '4 months'
+  }
+]
+
+export const backendDev = [
   {
     'key': 'NodeJS',
     'lang': 'NodesJS + Express',

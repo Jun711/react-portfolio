@@ -3,7 +3,6 @@ import { Div, Flex, Wrapper } from '../../theme/grid';
 import { media } from "../../theme/media";
 
 export const ListItem = styled.li`
-  height: 20px;
 `;
 
 export const ListGrid = styled.ul`
