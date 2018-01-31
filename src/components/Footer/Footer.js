@@ -15,7 +15,7 @@ class Footer extends Component {
           justify={'center'}
         >
           <h3>Connect with me:</h3>
-          <Network/>
+          <Network doBounce={false}/>
         </SocialMediaContainer>
       </FooterContainer>
     );
