@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Flex } from '../../theme/grid';
-import { blue, themeColor, white, green } from '../../theme/variables';
+import { green, themeColor, white } from '../../theme/variables';
+import { bounce } from '../../theme/doBounce';
 
 export const NetworkContainer = styled(Flex)`
   transition: color .3s;
@@ -8,28 +9,46 @@ export const NetworkContainer = styled(Flex)`
   i {
     text-align: center
   }
-
+  
   div {
    display: inline-block;
    padding-left: 7px;
    padding-right: 7px;
   }
   
-  a {
-    background-color: ${themeColor};
-    display: inline-block;
-    width: 55px;
-    height: 55px;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    font-size: 25px;
-    line-height: 55px;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    transition: background-color .3s ease-in-out;
-  }
-  a:hover {
+  ${({doBounce}) => doBounce && css`
+    div {
+      &:nth-child(1) {
+        animation: ${bounce} 1.4s ease-out 0.7s;
+      }
+      &:nth-child(2) {
+        animation: ${bounce} 1.4s ease-out 0.8s;
+      }
+      &:nth-child(3) {
+        animation: ${bounce} 1.4s ease-out 0.9s;
+      }
+      &:nth-child(4) {
+        animation: ${bounce} 1.4s ease-out 1s;
+      } 
+    }
+  `}
+`;
+
+export const SocialMediaA = styled.a`
+  background-color: ${themeColor};
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  font-size: 25px;
+  line-height: 55px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
     background-color: ${white};
     color: ${green};
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NetworkContainer } from './Network.style';
+import { NetworkContainer, SocialMediaA } from './Network.style';
 import { socialMediaItems } from './SocialMedia.data';
 
 class Network extends Component {
@@ -7,11 +7,11 @@ class Network extends Component {
   renderContactList() {
     return (socialMediaItems.map((contact) => (
         <div key={contact.key}>
-          <a
+          <SocialMediaA
             target='_blank'
             href={contact.link}>
             <i className={contact.icon}></i>
-          </a>
+          </SocialMediaA>
         </div>
       ))
     )
@@ -23,6 +23,7 @@ class Network extends Component {
         row
         justify={'center'}
         align={'center'}
+        doBounce={this.props.doBounce}
       >
         {this.renderContactList()}
       </NetworkContainer>
