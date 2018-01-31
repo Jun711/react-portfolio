@@ -1,6 +1,8 @@
 {
   "short_name": "Jun Goh",
-  "name": "Jun Goh Portfolio",
+  "name": "Jun Goh - Software Developer",
+  "description": "This is my webpage which showcases my recent projects, experience and skillset in software development.",
+  "default_locale": "en",
   "icons": [
     {
       "src": "favicon.ico",
