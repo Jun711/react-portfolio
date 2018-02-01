@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { Div, FixWidthContainer } from '../../theme/grid';
+import { FixWidthContainer, Wrapper } from '../../theme/grid';
 
-export const ComponentContainer = styled(Div)`
-  width: 100%; 
-`;
+export const ExperienceWrapper = styled(Wrapper)``;
 
 export const ExperienceContainer = styled(FixWidthContainer)`  
+  text-align: left;
   h3 {
     text-align: left;
   }

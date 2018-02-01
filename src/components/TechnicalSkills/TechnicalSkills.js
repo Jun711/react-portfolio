@@ -32,7 +32,7 @@ class TechnicalSkills extends Component {
       <TechnicalSkillWrapper>
         <Title
           h2
-          icon='fa-laptop'
+          icon='fa-code'
           title='Technical Skills'
         />
         <TechnicalSkillContainer

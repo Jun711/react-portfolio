@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Flex, Div } from '../../theme/grid';
 import { media } from "../../theme/media";
-import { red, yellow, THEME_COLOR, white, blue } from '../../theme/variables';
+import { red, yellow, themeColor, white, blue } from '../../theme/variables';
 
 export const Title = styled.h1`
   color: ${red};
@@ -19,8 +19,11 @@ export const ProjectContainer = styled(Flex)`
   margin: 0;
   flex-wrap: wrap; 
   background-color: ${red};
-  width: 1200px;
   margin: 0 auto;   
+  width: 1100px;
+  ${media.larger`
+    width: 90vw;
+  `}
   
   h3 {
     text-align: center;
@@ -55,7 +58,7 @@ export const ProjectItem = styled(Div)`
         width: 100%;
         height: 100%;
         color: ${blue};
-        background-color: ${THEME_COLOR};
+        background-color: ${themeColor};
         z-index: 2; 
       }
   }
