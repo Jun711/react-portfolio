@@ -1,5 +1,6 @@
 import { green, themeColor } from './variables';
 import styled from 'styled-components';
+import { media, mediaBeyond } from './media';
 
 export const UnderlineA = styled.a`
   cursor: pointer;
@@ -27,15 +28,28 @@ export const UnderlineA = styled.a`
     transform: scaleX(0);
     transition: transform 0.3s ease-out;
   }
-  
-   &:hover { 
-      span:after {
-        transform: scaleX(1);
-        transition: transform 0.3s ease-out;   
-      } 
-      
-      i {
-        color: ${green}
-      } 
-    }
+   ${mediaBeyond.tablet`
+     &:hover { 
+        span:after {
+          transform: scaleX(1);
+          transition: transform 0.3s ease-out;   
+        } 
+        
+        i {
+          color: ${green}
+        } 
+     }
+   `}
+   ${media.tablet`
+     &:active { 
+        span:after {
+          transform: scaleX(1);
+          transition: transform 0.3s ease-out;   
+        } 
+        
+        i {
+          color: ${green}
+        } 
+     }
+   `}
 `;

@@ -1,18 +1,24 @@
 import styled from 'styled-components';
-import { white } from '../../theme/variables';
 import { media } from '../../theme/media';
 
 export const ScrollUpButtonContainer = styled.div`
   display: none;
   ${media.tablet`
     display: block;
-    color: ${white};
     position: fixed;
+    font-size: 24px;
     bottom: 25px;
     right: 25px;
     opacity: 1;
-    z-index: 100;
+    z-index: 99;
     text-align: center;
-    transition: transform 0.7s ease-in-out, opacity 1s linear;
+    
+    i:last-child {
+      transition: transform 0.7s ease-in-out, opacity 1s linear;
+      
+      &:active {
+         transform: translateY(-10%);
+      }
+    }
   `}
 `;

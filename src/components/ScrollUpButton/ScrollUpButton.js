@@ -12,7 +12,7 @@ class ScrollUpButton extends Component {
   render() {
     return (
       <ScrollUpButtonContainer onClick={() => this.scrollToTop()}>
-          <FontAwButton class={'fa fa-angle-double-up'}/>
+        <FontAwButton class={'fa fa-angle-double-up'}/>
       </ScrollUpButtonContainer>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NameContainer } from './Name.style';
+import { NameContainer, NameLink } from './Name.style';
 
 class Name extends Component {
   render() {
@@ -9,7 +9,9 @@ class Name extends Component {
         justify={'flex-start'}
         alignItems={'center'}
       >
-        <h3>JUN GOH</h3>
+        <NameLink {...this.props.scrollConfig} itemProp='name' to='aboutMe'>
+          JUN GOH
+        </NameLink>
       </NameContainer>
     )
   }

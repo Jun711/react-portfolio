@@ -1,16 +1,23 @@
 import styled from 'styled-components';
 import { Div, Flex } from '../../theme/grid';
 import { charcoal, green, white } from '../../theme/variables';
+import { media, mediaBeyond } from '../../theme/media';
 
 export const Line = styled(Div)`
   color: ${white};
   font-size: 1em;
   font-weight: 100;  
   margin: 0 auto;
-  
-  &:hover {
-    color: ${green};
-  }
+  ${mediaBeyond.tablet`
+    &:hover {
+      color: ${green};
+    }
+  `}
+  ${media.tablet`
+    &:active {
+      color: ${green};
+    }
+  `}
 `;
 
 export const Container = styled(Flex)`

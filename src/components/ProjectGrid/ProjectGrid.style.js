@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import { Wrapper, Flex, Div, Grid } from '../../theme/grid';
-import { media } from "../../theme/media";
-import { red, yellow, THEME_COLOR, white, blue } from '../../theme/variables';
+import { Div, Grid, Wrapper } from '../../theme/grid';
+import { media, mediaBeyond } from '../../theme/media';
+import { lightThemeColor, midThemeColor, red, themeColor, white } from '../../theme/variables';
 
 export const Title = styled.h1`
   color: ${red};
@@ -10,20 +10,15 @@ export const Title = styled.h1`
 `;
 
 export const ProjectWrapper = styled(Wrapper)`
-  background-color: ${blue};
 `;
 
 export const ProjectContainer = styled(Grid)`
-  padding: 0;
-  margin: 0;
+  // padding: 2em 0;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, 300px);
-  background-color: ${red};
-  width: 1170px;
+  width: 1100px;
   min-height: 30vh;
-  margin: 4vh auto;
-  border: 1px solid white;   
-  overflow: visible;
+  margin: 3vh auto;
  
   ${media.larger`
     grid-template-columns: repeat(auto-fit, 250px);  
@@ -41,21 +36,42 @@ export const ProjectContainer = styled(Grid)`
     grid-template-columns: repeat(auto-fit, 300px);
     grid-gap: 0px 0px;   
   `}
-  
-  h3 {
-    text-align: center;
-    color: black;
-    
-    font-size: 2em;
-  }
+`;
+
+export const ProjectCover = styled.img`
+  height: 300px;
+  width: 300px;
+  ${media.larger`
+    height: 250px;
+    width: 250px;
+  `}
+  ${media.desktop`
+    height: 220px;
+    width: 220px;
+  `}
+  ${media.tablet`
+    height: 170px;
+    width: 170px;
+  `}
+  ${media.phone`
+    height: 300px;
+    width: 300px;
+  `}
 `;
 
 export const ProjectItem = styled(Div)`
-  // padding: 5px;
   height: 300px;
   width: 300px;
   line-height: 300px;
-  // margin: 10px;
+  font-size: 2em;
+  border: 1px solid ${themeColor};
+  background-color: ${lightThemeColor};
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  position: relative; 
+  display: block; 
   ${media.larger`
     height: 250px;
     width: 250px;
@@ -70,35 +86,77 @@ export const ProjectItem = styled(Div)`
     height: 170px;
     width: 170px;
     line-height: 170px;  
-    font-size: 2em;
+    font-size: 1.5em;
   `}
   ${media.phone`
     height: 300px;
     width: 300px;
     line-height: 300px;  
-    font-size: 2em;
+    font-size: 1.5em;
   `}
-  background-color: ${yellow};
-  color: white;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
-  vertical-align: middle;
-  position: relative; 
-  display: block;   
+    
   
-   &:hover {
-      &:after {
-        content: ' Overlay ';
-        cursor: pointer;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        color: ${blue};
-        background-color: ${THEME_COLOR};
-        z-index: 2; 
+  ${({hoverContent}) => hoverContent && css`
+     
+    ${media.larger`
+      font-size: 25px;
+    `}
+    ${media.desktop`
+      font-size: 21px;
+    `}
+    ${media.tablet`
+      font-size: 18px;
+    `}
+    ${media.phone`
+      font-size: 25px;
+    `}
+    ${mediaBeyond.tablet`
+      &:hover {
+        &:after {
+          content: attr(data-content);
+          cursor: pointer;
+          opacity: 0.9;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+         
+          vertical-align: middle;
+          font-size: 25px;
+          // font-weight: 100;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          color: ${white};
+          background-color: ${midThemeColor};   
+          z-index: 2; 
+        }
       }
-  }
+    `}
+    
+    ${media.tablet`
+      &:active {
+        &:after {
+          content: attr(data-content);
+          cursor: pointer;
+          opacity: 0.9;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+         
+          vertical-align: middle;
+          font-size: 25px;
+          // font-weight: 100;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          color: ${white};
+          background-color: ${midThemeColor};   
+          z-index: 2; 
+        }
+      }
+    `}
+  `}
+   
 `;

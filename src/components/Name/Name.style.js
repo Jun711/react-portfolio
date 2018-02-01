@@ -1,29 +1,38 @@
 import styled from 'styled-components';
 import { Flex } from '../../theme/grid';
 import { green, white } from '../../theme/variables';
-import { media } from '../../theme/media';
+import { media, mediaBeyond } from '../../theme/media';
+import { Link } from 'react-scroll';
 
 export const NameContainer = styled(Flex)`
   max-height: 3.5em;
   ${media.tablet`
     max-height: 3em;
   `}
-  h3 {
-    padding-left: 40px;
-    font-size: 1em;
-    line-height: 1em;
-    color: ${white}; 
-    
-    &:last-of-type:before {
-      font-family: FontAwesome;
-      content:'\\f25b';
-      position: absolute;
-      opacity: 0;
-      vertical-align: middle;
-      left: -30px;
-      transition: all 200ms ease;
-    }
-    
+  
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
+  cursor: pointer;
+`;
+
+export const NameLink = styled(Link)`
+  padding-left: 40px;
+  font-size: 24px;
+  line-height: 24px;
+  color: ${white}; 
+  
+  &:last-of-type:before {
+    font-family: FontAwesome;
+    content:'\\f25b';
+    position: absolute;
+    opacity: 0;
+    vertical-align: middle;
+    left: -30px;
+    transition: all 200ms ease;
+  }
+  ${mediaBeyond.tablet`
     &:hover {
       color: ${green}; 
       &:last-of-type:before {
@@ -31,5 +40,14 @@ export const NameContainer = styled(Flex)`
         opacity: 1;
       }
     }
-  }
-`;
+  `}
+  ${media.tablet`
+    &:active {
+      color: ${green}; 
+      &:last-of-type:before {
+        left: 10px;
+        opacity: 1;
+      }
+    }  
+  `}
+`

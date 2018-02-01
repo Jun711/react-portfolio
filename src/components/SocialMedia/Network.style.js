@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { Flex } from '../../theme/grid';
 import { green, themeColor, white } from '../../theme/variables';
 import { bounce } from '../../theme/doBounce';
+import { media, mediaBeyond } from '../../theme/media';
 
 export const NetworkContainer = styled(Flex)`
   transition: color .3s;
@@ -47,9 +48,16 @@ export const SocialMediaA = styled.a`
   vertical-align: middle;
   color: white;
   transition: background-color .3s ease-in-out;
-
-  &:hover {
-    background-color: ${white};
-    color: ${green};
-  }
+  ${mediaBeyond.tablet`
+    &:hover {
+      background-color: ${white};
+      color: ${green};
+    }
+  `}
+  ${media.tablet`
+    &:active {
+      background-color: ${white};
+      color: ${green};
+    } 
+  `}
 `;
