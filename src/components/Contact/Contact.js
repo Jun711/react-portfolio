@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
-import { ComponentContainer, Line } from './Contact.style'
+import { ContactWrapper, ContactURL, Line } from './Contact.style'
+import Title from '../Title/Title';
 
 class Contact extends Component {
   render() {
     return (
-      <ComponentContainer>
-        <h1>Contact</h1>
-        <hr/>
+      <ContactWrapper>
+        <Title
+          h2
+          icon='fa-phone'
+          title='Contact'
+        />
         <Line>
-          <a href='mailto:cygoh@umich.edu'>Write me at <span>cygoh@umich.edu</span></a>
+          <ContactURL href='mailto:cygoh@umich.edu'>Write me at
+            <span>
+              <i className='fa fa-envelope-o' aria-hidden='true'/>
+              cygoh@umich.edu
+            </span>
+          </ContactURL>
         </Line>
         <Line>
-          <a href='mailto:cygoh@umich.edu'>Visit my blog at <span>www.language-diary.com</span></a>
+          <ContactURL href='mailto:cygoh@umich.edu'>Visit my blog at
+            <span>
+              <i className='fa fa-rss' aria-hidden='true'/>
+              www.language-diary.com
+            </span>
+          </ContactURL>
         </Line>
-      </ComponentContainer>
+      </ContactWrapper>
     );
   }
 }

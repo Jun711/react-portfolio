@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { ComponentContainer, List, ListItem } from './About.style';
+import { AboutWrapper, AboutMeContainer, List, ListItem } from './About.style';
 import { aboutMeItems } from './AboutMeItems.data.js';
+import Title from '../Title/Title';
 
 class About extends Component {
   renderAboutMe() {
@@ -8,21 +9,24 @@ class About extends Component {
       <ListItem key={index}>{desc}</ListItem>
     )
     return (
-      <ComponentContainer>
+      <AboutMeContainer>
         <List>
           {aboutMe}
         </List>
-      </ComponentContainer>
+      </AboutMeContainer>
     );
   }
 
   render() {
     return (
-      <ComponentContainer>
-        <h1>About Jun</h1>
-        <hr/>
+      <AboutWrapper>
+        <Title
+          h2
+          icon='fa-address-card-o'
+          title='About Jun'
+        />
         {this.renderAboutMe()}
-      </ComponentContainer>
+      </AboutWrapper>
     );
   }
 }

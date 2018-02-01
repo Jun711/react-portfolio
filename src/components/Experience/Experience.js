@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import { ComponentContainer, ExperienceContainer } from './Experience.style';
+import { ExperienceWrapper, ExperienceContainer } from './Experience.style';
 import ExperienceItem from './ExperienceItem/ExperienceItem'
 import { experienceItems } from './ExperienceItem/ExperienceItemDes.data';
+import Title from '../Title/Title';
 
 class Experience extends Component {
   render() {
     return (
-      <ComponentContainer>
-        <h1>Experience</h1>
-        <hr/>
+      <ExperienceWrapper>
+        <Title
+          h2
+          icon='fa fa-line-chart'
+          title='Experience'
+        />
         <ExperienceContainer>
           {experienceItems.map((item) =>
             <ExperienceItem key={item.key} item={item}/>
           )}
         </ExperienceContainer>
-      </ComponentContainer>
+      </ExperienceWrapper>
     );
   }
 }
