@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import { themeColor, green } from "./colors";
+import { themeColor } from "./colors";
 
 /* eslint-disabled */
 injectGlobal`

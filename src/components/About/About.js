@@ -9,7 +9,7 @@ class About extends Component {
     const aboutMe = aboutMeItems.map((desc, index) =>
       <WaypointTrigger singleUse key={index}>
         {({trigger}) =>
-          <ListItem focus={index == 0 ? true : false}
+          <ListItem focus={index === 0 ? true : false}
                     className={trigger ? 'inViewAppear' : null}>{desc}</ListItem>
         }
       </WaypointTrigger>
