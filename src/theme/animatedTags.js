@@ -1,4 +1,4 @@
-import { green, themeColor } from './variables';
+import { green, themeColor } from './colors';
 import styled from 'styled-components';
 import { media, mediaBeyond } from './media';
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { green } from '../../theme/variables';
+import { green } from '../../theme/colors';
 import { media, mediaBeyond } from '../../theme/media';
 
 export const FontAwSpan = styled.span`  

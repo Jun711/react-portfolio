@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Flex } from '../../theme/grid';
-import { green, themeColor, white } from '../../theme/variables';
+import { green, themeColor, white } from '../../theme/colors';
 import { bounce } from '../../theme/doBounce';
 import { media, mediaBeyond } from '../../theme/media';
 

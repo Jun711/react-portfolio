@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Div } from '../../theme/grid';
-import { green } from '../../theme/variables';
+import { green } from '../../theme/colors';
 import { media, mediaBeyond } from '../../theme/media';
 
 export const TitleContainer = styled(Div)`

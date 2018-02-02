@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Div, Flex } from '../../theme/grid';
-import { charcoal, green, white } from '../../theme/variables';
+import { charcoal, green, white } from '../../theme/colors';
 import { media, mediaBeyond } from '../../theme/media';
 
 export const Line = styled(Div)`

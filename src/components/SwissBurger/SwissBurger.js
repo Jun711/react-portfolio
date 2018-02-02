@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { backgroundColor, menuBackground } from '../../theme/variables';
 import { BurgerSlice, SwissBurgerBun, SwissBurgerHeader } from './SwissBurger.style';
 import Menu from '../Menu/Menu';
 import { Div, Flex } from '../../theme/grid';
@@ -17,7 +16,6 @@ class SwissBurger extends Component {
   }
 
   _burgerClick(evt) {
-    console.log('burgerClick evt:', evt)
     this.setState({
       bar1: !this.state.bar1,
       bar2: !this.state.bar2,
@@ -35,7 +33,7 @@ class SwissBurger extends Component {
           alignItems={'center'}
         >
           <Name
-            scrollConfig={{...this.props.scrollConfig,  offset: -84}}
+            scrollConfig={{...this.props.scrollConfig, offset: -84}}
           />
           <Flex
             row

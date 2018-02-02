@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Flex, Div } from '../../theme/grid';
 import { media } from "../../theme/media";
-import { red, yellow, themeColor, white, blue } from '../../theme/variables';
+import { red, yellow, themeColor, white, blue } from '../../theme/colors';
 
 export const Title = styled.h1`
   color: ${red};

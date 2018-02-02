@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex } from '../../theme/grid';
-import { green, white } from '../../theme/variables';
+import { green, white } from '../../theme/colors';
 import { media, mediaBeyond } from '../../theme/media';
 import { Link } from 'react-scroll';
 
@@ -32,22 +32,29 @@ export const NameLink = styled(Link)`
     left: -30px;
     transition: all 200ms ease;
   }
-  ${mediaBeyond.tablet`
-    &:hover {
-      color: ${green}; 
-      &:last-of-type:before {
-        left: 10px;
-        opacity: 1;
-      }
+  &:hover {
+    color: ${green}; 
+    &:last-of-type:before {
+      left: 10px;
+      opacity: 1;
     }
-  `}
-  ${media.tablet`
-    &:active {
-      color: ${green}; 
-      &:last-of-type:before {
-        left: 10px;
-        opacity: 1;
-      }
-    }  
-  `}
+  }
+  // ${mediaBeyond.tablet`
+  //   &:hover {
+  //     color: ${green}; 
+  //     &:last-of-type:before {
+  //       left: 10px;
+  //       opacity: 1;
+  //     }
+  //   }
+  // `}
+  // ${media.tablet`
+  //   &:active {
+  //     color: ${green}; 
+  //     &:last-of-type:before {
+  //       left: 10px;
+  //       opacity: 1;
+  //     }
+  //   }  
+  // `}
 `

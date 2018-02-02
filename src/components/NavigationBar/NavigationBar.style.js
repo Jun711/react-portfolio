@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex } from '../../theme/grid';
-import { blue, green, themeColor, white } from '../../theme/variables';
+import { blue, green, themeColor, white } from '../../theme/colors';
 import { Link } from 'react-scroll';
 import { media, mediaBeyond } from '../../theme/media';
 

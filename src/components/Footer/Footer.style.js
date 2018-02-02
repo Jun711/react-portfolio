@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex } from '../../theme/grid';
-import { themeColor, white } from '../../theme/variables';
+import { themeColor, white } from '../../theme/colors';
 
 export const SocialMediaContainer = styled(Flex)`
   h3 {

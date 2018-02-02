@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Div, Flex } from '../../theme/grid';
-import { white, midThemeColor, themeColor, lightThemeColor, green } from '../../theme/variables';
+import { white, midThemeColor, themeColor, lightThemeColor, green } from '../../theme/colors';
 import { media } from '../../theme/media';
 
 export const SwissBurgerHeader = styled(Flex)`
