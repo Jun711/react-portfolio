@@ -67,9 +67,13 @@ injectGlobal`
   
   .active {
     text-decoration: underline;
-    // color: ${green};
   }
   
+  .inViewAppear {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+    
   img {
     object-fit: cover;
   }
