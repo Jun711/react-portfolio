@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Div, Flex } from '../../theme/grid';
-import { blue, themeColor, white } from '../../theme/variables';
+import { blue, themeColor, white } from '../../theme/colors';
 
 export const Container = styled(Flex)`
   color: ${blue};

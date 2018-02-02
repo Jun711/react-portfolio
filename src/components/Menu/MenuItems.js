@@ -1,11 +1,11 @@
 export const menu = [
   {
-    'key': 'experience',
-    'item': 'Experience',
-  },
-  {
     'key': 'projects',
     'item': 'Projects'
+  },
+  {
+    'key': 'experience',
+    'item': 'Experience',
   },
   {
     'key': 'contact',

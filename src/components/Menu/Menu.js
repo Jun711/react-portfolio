@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Background, ComponentContainer, Container, List, ListItem } from './Menu.style';
+import { ComponentContainer, Container, List, ListItem } from './Menu.style';
 import { menu } from './MenuItems'
 import { Link } from 'react-scroll';
 
