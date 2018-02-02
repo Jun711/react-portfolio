@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  NameContainer, NavigationContainer, NavigationItemContainer, NavItem, NavItemA,
-  NavItemEmbed
-} from './NavigationBar.style';
+import { NavigationContainer, NavItem, NavItemA } from './NavigationBar.style';
 import { Flex } from '../../theme/grid';
 import Name from '../Name/Name';
 

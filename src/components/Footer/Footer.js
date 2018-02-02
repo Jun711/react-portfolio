@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FooterContainer, SocialMediaContainer } from './Footer.style';
 import Network from '../SocialMedia/Network';
+import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 
 class Footer extends Component {
   render() {
@@ -10,13 +11,18 @@ class Footer extends Component {
         justify={'center'}
         align={'center'}
       >
-        <SocialMediaContainer
-          column
-          justify={'center'}
-        >
-          <h3>Connect with me:</h3>
-          <Network doBounce={false}/>
-        </SocialMediaContainer>
+        <WaypointTrigger singleUse>
+          {({trigger}) =>
+            <SocialMediaContainer
+              column
+              justify={'center'}
+              className={trigger ? 'inViewAppear' : null}
+            >
+              <h3>Connect with me:</h3>
+              <Network doBounce={false}/>
+            </SocialMediaContainer>
+          }
+        </WaypointTrigger>
       </FooterContainer>
     );
   }

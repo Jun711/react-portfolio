@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { ComponentContainer, ListItem, List } from './ExperienceItem.style';
+import { ComponentContainer, H3, List, ListItem } from './ExperienceItem.style';
+import WaypointTrigger from '../../WaypointTrigger/WaypointTrigger';
 
 class ExperienceItem extends Component {
   renderDescription(description) {
     const languageItems = description.map((desc, index) =>
-      <ListItem key={index}>{desc}</ListItem>
+      <WaypointTrigger singleUse key={index}>
+        {({trigger}) =>
+          <ListItem className={trigger ? 'inViewAppear' : null}>{desc}</ListItem>
+        }
+      </WaypointTrigger>
     )
     return (
       <List>
@@ -16,7 +21,11 @@ class ExperienceItem extends Component {
   render() {
     return (
       <ComponentContainer>
-        <h3>{this.props.item.title}</h3>
+        <WaypointTrigger singleUse>
+          {({trigger}) =>
+            <H3 className={trigger ? 'inViewAppear' : null} >{this.props.item.title}</H3>
+          }
+        </WaypointTrigger>
         {this.renderDescription(this.props.item.description)}
       </ComponentContainer>
     );

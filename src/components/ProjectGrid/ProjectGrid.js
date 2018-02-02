@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { ProjectContainer, ProjectItem, ProjectWrapper, ProjectCover } from './ProjectGrid.style';
+import { ProjectContainer, ProjectCover, ProjectItem, ProjectWrapper } from './ProjectGrid.style';
 import Project from '../Project/Project';
 import { projects } from './Projects.data'
 import Title from '../Title/Title';
+import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 
 class ProjectGrid extends Component {
   constructor(props) {
@@ -14,7 +15,6 @@ class ProjectGrid extends Component {
   }
 
   toggleProject(openProject, project) {
-    console.log('toggleProject')
     if (openProject) {
       document.querySelector('body').style.overflow = 'hidden';
     } else {
@@ -29,15 +29,22 @@ class ProjectGrid extends Component {
   renderProjects() {
     const projectItems = projects.map((project) => {
       const cover = project.coverUrl || 'default-cover.jpg';
-        return (<ProjectItem
-          key={project.key}
-          hoverContent
-          data-content={project.languages}
-          onClick={() => this.toggleProject.call(this, true, project)}
-        >
-          {project.coverUrl && <ProjectCover alt={project.title} src={require(`../../assets/img/${cover}`)}/>}
-          {!project.coverUrl && <p>{project.title}</p>}
-        </ProjectItem>)
+      return (
+        <WaypointTrigger
+          singleUse
+          key={project.key}>
+          {({trigger}) =>
+            <ProjectItem
+              hoverContent
+              className={trigger ? 'inViewAppear' : null}
+              data-content={project.languages}
+              onClick={() => this.toggleProject.call(this, true, project)}
+            >
+              {project.coverUrl && <ProjectCover alt={project.title} src={require(`../../assets/img/${cover}`)}/>}
+              {!project.coverUrl && <p>{project.title}</p>}
+            </ProjectItem>
+          }
+        </WaypointTrigger>)
     })
 
     return projectItems

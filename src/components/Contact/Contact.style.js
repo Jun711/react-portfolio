@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 import { Wrapper, FixWidthContainer } from '../../theme/grid';
-import { media } from '../../theme/media';
+import { media, mediaBeyond } from '../../theme/media';
 import { UnderlineA } from '../../theme/animatedTags';
 
 export const Line = styled(FixWidthContainer)`
-  font-size: 1.2em;  
-  padding: 15px;
+  opacity: 0;
+  font-size: 1.3em;  
+  ${mediaBeyond.desktop`
+    padding: 15px;
+  `}
+  padding: 0;
+  opacity: 0;
 `;
 
 export const ContactWrapper = styled(Wrapper)`

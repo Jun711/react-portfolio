@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import { AboutWrapper, AboutMeContainer, List, ListItem } from './About.style';
+import { AboutMeContainer, AboutWrapper, List, ListItem } from './About.style';
 import { aboutMeItems } from './AboutMeItems.data.js';
 import Title from '../Title/Title';
+import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 
 class About extends Component {
   renderAboutMe() {
     const aboutMe = aboutMeItems.map((desc, index) =>
-      <ListItem key={index}>{desc}</ListItem>
+      <WaypointTrigger singleUse key={index}>
+        {({trigger}) =>
+          <ListItem focus={index == 0 ? true : false}
+                    className={trigger ? 'inViewAppear' : null}>{desc}</ListItem>
+        }
+      </WaypointTrigger>
     )
     return (
       <AboutMeContainer>

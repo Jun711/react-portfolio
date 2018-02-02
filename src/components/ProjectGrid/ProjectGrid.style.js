@@ -60,6 +60,7 @@ export const ProjectCover = styled.img`
 `;
 
 export const ProjectItem = styled(Div)`
+  opacity: 0; 
   height: 300px;
   width: 300px;
   line-height: 300px;
@@ -94,10 +95,8 @@ export const ProjectItem = styled(Div)`
     line-height: 300px;  
     font-size: 1.5em;
   `}
-    
   
   ${({hoverContent}) => hoverContent && css`
-     
     ${media.larger`
       font-size: 25px;
     `}

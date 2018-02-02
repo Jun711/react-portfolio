@@ -3,11 +3,16 @@ import { ListGrid, ListItem, SkillSet, TechnicalSkillContainer, TechnicalSkillWr
 import { backendDev, mobileDev, webDev } from './Dev.data';
 import { tools } from './Tools';
 import Title from '../Title/Title';
+import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 
 class TechnicalSkills extends Component {
   renderLanguages(devLang) {
     const languageItems = devLang.map((language) =>
-      <ListItem key={language.key}>{language.lang} - {language.experience}</ListItem>
+      <WaypointTrigger singleUse key={language.key}>
+        {({trigger}) =>
+          <ListItem className={trigger ? 'inViewAppear' : null}>{language.lang} - {language.experience}</ListItem>
+        }
+      </WaypointTrigger>
     )
     return (
       <ListGrid>
@@ -18,7 +23,11 @@ class TechnicalSkills extends Component {
 
   renderTools() {
     const toolItems = tools.map((tool) =>
-      <ListItem key={tool.key}>{tool.name}</ListItem>
+      <WaypointTrigger singleUse key={tool.key}>
+        {({trigger}) =>
+          <ListItem className={trigger ? 'inViewAppear' : null}>{tool.name}</ListItem>
+        }
+      </WaypointTrigger>
     )
     return (
       <ListGrid>
@@ -28,41 +37,45 @@ class TechnicalSkills extends Component {
   }
 
   render() {
+    const skillCategories = [
+      {
+        icon: 'fa-file-code-o',
+        title: 'Web Dev',
+        data: webDev,
+      },
+      {
+        icon: 'fa-mobile',
+        title: 'Mobile Dev',
+        data: mobileDev,
+      },
+      {
+        icon: 'fa-database',
+        title: 'Backend',
+        data: backendDev,
+      },
+
+    ];
     return (
       <TechnicalSkillWrapper>
         <Title
           h2
           icon='fa-code'
-          title='Technical Skills'
+          title='Skills'
         />
         <TechnicalSkillContainer
           row
           justify={'center'}
         >
-          <SkillSet>
-            <Title
-              h4
-              icon='fa-file-code-o'
-              title='Web Dev'
-            />
-            {this.renderLanguages(webDev)}
-          </SkillSet>
-          <SkillSet>
-            <Title
-              h4
-              icon='fa-mobile'
-              title='Mobile Dev'
-            />
-            {this.renderLanguages(mobileDev)}
-          </SkillSet>
-          <SkillSet>
-            <Title
-              h4
-              icon='fa-database'
-              title='Backend'
-            />
-            {this.renderLanguages(backendDev)}
-          </SkillSet>
+          {skillCategories.map((skillCategory, index) =>
+            <SkillSet key={index}>
+              <Title
+                h4
+                icon={skillCategory.icon}
+                title={skillCategory.title}
+              />
+              {this.renderLanguages(skillCategory.data)}
+            </SkillSet>
+          )}
           <SkillSet>
             <Title
               h4

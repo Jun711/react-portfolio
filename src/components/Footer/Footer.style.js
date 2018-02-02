@@ -3,11 +3,11 @@ import { Flex } from '../../theme/grid';
 import { themeColor, white } from '../../theme/colors';
 
 export const SocialMediaContainer = styled(Flex)`
+  opacity: 0;
   h3 {
     margin-top: 0;
     color: ${white};
   }
-  
 `;
 
 export const FooterContainer = styled(Flex)`

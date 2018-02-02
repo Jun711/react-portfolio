@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ExperienceWrapper, ExperienceContainer } from './Experience.style';
+import { ExperienceContainer, ExperienceWrapper } from './Experience.style';
 import ExperienceItem from './ExperienceItem/ExperienceItem'
 import { experienceItems } from './ExperienceItem/ExperienceItemDes.data';
 import Title from '../Title/Title';

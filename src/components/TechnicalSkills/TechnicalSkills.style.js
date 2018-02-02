@@ -3,6 +3,7 @@ import { Div, Flex, Wrapper } from '../../theme/grid';
 import { media } from "../../theme/media";
 
 export const ListItem = styled.li`
+  opacity: 0;
 `;
 
 export const ListGrid = styled.ul`
@@ -40,5 +41,5 @@ export const SkillSet = styled(Div)`
   text-align: center;
   vertical-align: middle;
   position: relative; 
-  display: block;   
+  display: block; 
 `;

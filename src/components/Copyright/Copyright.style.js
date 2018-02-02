@@ -3,7 +3,8 @@ import { Div, Flex } from '../../theme/grid';
 import { charcoal, green, white } from '../../theme/colors';
 import { media, mediaBeyond } from '../../theme/media';
 
-export const Line = styled(Div)`
+export const CopyrightLine = styled(Div)`
+  opacity: 0;
   color: ${white};
   font-size: 1em;
   font-weight: 100;  

@@ -7,9 +7,14 @@ export const ComponentContainer = styled(Div)`
 
 export const ListItem = styled.li`
   font-size: 16px;
-  text-decoration: none;  
+  text-decoration: none;
+  opacity: 0;  
 `;
 
 export const List = styled.ul`
   margin-top: 0;
+`;
+
+export const H3 = styled.h3`
+  opacity: 0;
 `;

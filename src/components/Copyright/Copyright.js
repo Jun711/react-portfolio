@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Line } from './Copyright.style'
+import { Container, CopyrightLine } from './Copyright.style'
+import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 
 class Copyright extends Component {
   setCopyrightLine() {
@@ -21,7 +22,14 @@ class Copyright extends Component {
         justify={'center'}
         align={'center'}
       >
-        <Line>{this.state.copyrightLine}</Line>
+        <WaypointTrigger
+          singleUse
+          last
+        >
+          {({trigger}) =>
+            <CopyrightLine className={trigger ? 'inViewAppear' : null}>{this.state.copyrightLine}</CopyrightLine>
+          }
+        </WaypointTrigger>
       </Container>
     );
   }
