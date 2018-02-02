@@ -14,7 +14,7 @@ export default class WaypointTrigger extends Component {
     }
     this.setState({trigger: true});
     if (this.props.singleUse) {
-      this.onEnter = null;
+      this.onEnter = () => {};
     }
   };
 
@@ -27,7 +27,7 @@ export default class WaypointTrigger extends Component {
       this.setState({trigger: false});
     }
     if (this.props.singleUse) {
-      this.onLeave = null;
+      this.onLeave = () => {};
     }
   };
 
@@ -38,7 +38,7 @@ export default class WaypointTrigger extends Component {
         <Waypoint
           scrollableAncestor={window}
           topOffset={30}
-          bottomOffset={this.props.last? 0: 100}
+          bottomOffset={this.props.last? 0: 150}
           {...etcProps}
           onLeave={this.onLeave}
           onEnter={this.onEnter}/>
