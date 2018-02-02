@@ -8,7 +8,9 @@ const sizes = {
 };
 
 const minSizes = {
+  phone: 377,
   tablet: 769,
+  desktop: 993,
   larger: 1171
 };
 
