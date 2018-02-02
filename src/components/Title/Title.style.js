@@ -24,7 +24,6 @@ export const TitleContainer = styled(Div)`
     transition: opacity 0.3s;
   `}
   
-  
   ${mediaBeyond.tablet`
     &:hover {
       span {

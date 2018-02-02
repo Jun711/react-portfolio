@@ -20,16 +20,16 @@ export const NetworkContainer = styled(Flex)`
   ${({doBounce}) => doBounce && css`
     div {
       &:nth-child(1) {
-        animation: ${bounce} 1.4s ease-out 0.7s;
+        animation: ${bounce} 1.3s ease-out 1.2s;
       }
       &:nth-child(2) {
-        animation: ${bounce} 1.4s ease-out 0.8s;
+        animation: ${bounce} 1.3s ease-out 1.3s;
       }
       &:nth-child(3) {
-        animation: ${bounce} 1.4s ease-out 0.9s;
+        animation: ${bounce} 1.3s ease-out 1.4s;
       }
       &:nth-child(4) {
-        animation: ${bounce} 1.4s ease-out 1s;
+        animation: ${bounce} 1.3s ease-out 1.5s;
       } 
     }
   `}

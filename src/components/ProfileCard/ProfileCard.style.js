@@ -16,7 +16,7 @@ export const ProfileContainer = styled(Flex)`
 `;
 
 export const ProfileImageContainer = styled(FixWidthFlexContainer)`
-    animation: ${bounce} 1.4s ease-out 0.7s;
+    animation: ${bounce} 1.3s ease-out 1.2s;  
 `;
 
 export const ProfileImage = styled.img`
