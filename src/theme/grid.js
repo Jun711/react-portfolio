@@ -17,6 +17,7 @@ export const Div = styled.div`
 `;
 
 export const Wrapper = styled(Div)`
+  text-align: center;
   width: 100%;
   right: 0;
   left: 0;
@@ -76,6 +77,14 @@ export const Grid = styled(Div)`
   `}
   ${({alignContent}) => alignContent && css`
     align-content: ${alignContent};   
+  `}
+`;
+
+export const FixWidthRelContainer = styled(Relative)`
+  margin: 0 auto;
+  width: 1100px;
+  ${media.larger`
+    width: 90vw;
   `}
 `;
 

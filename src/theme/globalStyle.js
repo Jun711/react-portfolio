@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import { themeColor, charcoal } from "./variables";
+import { themeColor, green } from "./colors";
 
 /* eslint-disabled */
 injectGlobal`
@@ -16,7 +16,7 @@ injectGlobal`
   
   h1, h2, h3 {
     text-align: center;
-    margin-bottom: 5;
+    padding: 5px 0;
   }
   
   h1 {
@@ -25,27 +25,37 @@ injectGlobal`
   
   h2 {
     font-weight: 600;
+    position: relative;
+    display: inline-block;
   }
+  
+  h2,h4 {
+    &:after {
+      position: absolute;
+      content: '';
+      height: 4px;
+      width: 100%;
+      bottom: -11px;
+      left: 0;
+      background: ${themeColor};
+      transition: width 0.3s linear; 
+    }
+  } 
   
   h3 {
     font-weight: 500;
   }
   
-  hr {
-    margin: 25px auto;
-    border: 2px solid ${themeColor};
-    max-width: 14em;  
+  h4 {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
   }
   
-  h3 + hr {
-    margin: 25px auto;
-    border: 2px solid ${themeColor};
-    max-width: 7em;  
-  }
-  
-  li {
-    letter-spacing: 0.0625em;
-    line-height: 1.7em;
+  li, a {
+    letter-spacing: 0.09em;
+    line-height: 2em;
     font-size: 17px;
   }
   
@@ -57,5 +67,10 @@ injectGlobal`
   
   .active {
     text-decoration: underline;
+    // color: ${green};
+  }
+  
+  img {
+    object-fit: cover;
   }
 `
