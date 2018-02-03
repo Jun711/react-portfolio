@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Wrapper, FixWidthContainer } from '../../theme/grid';
+import { Wrapper, FixedWidthContainer } from '../../theme/grid';
 import { media, mediaBeyond } from '../../theme/media';
 import { UnderlineA } from '../../theme/animatedTags';
 
-export const Line = styled(FixWidthContainer)`
+export const Line = styled(FixedWidthContainer)`
   opacity: 0;
   font-size: 1.3em;  
   ${mediaBeyond.desktop`

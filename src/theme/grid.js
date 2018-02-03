@@ -80,7 +80,7 @@ export const Grid = styled(Div)`
   `}
 `;
 
-export const FixWidthRelContainer = styled(Relative)`
+export const FixedWidthRelContainer = styled(Relative)`
   margin: 0 auto;
   width: 1100px;
   ${media.larger`
@@ -88,7 +88,7 @@ export const FixWidthRelContainer = styled(Relative)`
   `}
 `;
 
-export const FixWidthContainer = styled(Div)`
+export const FixedWidthContainer = styled(Div)`
   margin: 0 auto;
   width: 1100px;
   ${media.larger`
@@ -96,7 +96,7 @@ export const FixWidthContainer = styled(Div)`
   `}
 `;
 
-export const FixWidthFlexContainer = styled(Flex)`
+export const FixedWidthFlexContainer = styled(Flex)`
   margin: 0 auto;
   width: 1100px;
   ${media.larger`

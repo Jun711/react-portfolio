@@ -5,7 +5,6 @@ import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 
 class Title extends Component {
   render() {
-    console.log('Title trigger:', this.props.trigger)
     return (
       <WaypointTrigger singleUse>
         {({trigger}) =>

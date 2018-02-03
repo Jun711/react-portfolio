@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FixWidthFlexContainer, Flex } from '../../theme/grid';
+import { FixedWidthFlexContainer, Flex } from '../../theme/grid';
 import { green } from '../../theme/colors';
 import { bounce } from '../../theme/doBounce';
 
@@ -15,7 +15,7 @@ export const ProfileContainer = styled(Flex)`
   background-position: center;
 `;
 
-export const ProfileImageContainer = styled(FixWidthFlexContainer)`
+export const ProfileImageContainer = styled(FixedWidthFlexContainer)`
     animation: ${bounce} 1.3s ease-out 1.2s;  
 `;
 

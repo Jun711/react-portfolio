@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
-import { FixWidthContainer, Wrapper } from '../../theme/grid';
+import { FixedWidthContainer, Wrapper } from '../../theme/grid';
 import { media } from '../../theme/media'
 
-export const AboutMeContainer = styled(FixWidthContainer)`
+export const AboutMeContainer = styled(FixedWidthContainer)`
   text-align: left;
 `;
 
