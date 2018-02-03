@@ -14,11 +14,14 @@ export const ScrollUpButtonContainer = styled.div`
     text-align: center;
     
     i:last-child {
-      transition: transform 0.7s ease-in-out, opacity 1s linear;
+      transition: transform 0.7s ease-in-out;
       
       &:active {
          transform: translateY(-10%);
       }
     }
+    opacity: ${({show}) => show || 0};
+    transform: ${({translate}) => `translateY(${translate})`};
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   `}
 `;

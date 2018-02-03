@@ -6,14 +6,22 @@ import Copyright from '../../components/Copyright/Copyright';
 import { Events, scrollSpy } from 'react-scroll';
 import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton";
 import { AppContainer } from './App.style'
+import WaypointTrigger from '../../components/WaypointTrigger/WaypointTrigger';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showScrollUpButton: false
+    }
+  }
+
   componentDidMount() {
-    Events.scrollEvent.register('begin', function() {
+    Events.scrollEvent.register('begin', function () {
       console.log('begin', arguments);
     });
 
-    Events.scrollEvent.register('end', function() {
+    Events.scrollEvent.register('end', function () {
       console.log('end', arguments);
     });
 
@@ -25,13 +33,26 @@ export default class App extends Component {
     Events.scrollEvent.remove('end');
   }
 
+  toggleScrollUpButton(toggle) {
+    this.setState(
+      {
+        showScrollUpButton: toggle
+      }
+    )
+  }
+
   render() {
     return (
       <AppContainer>
-        <NavHeader/>
+        <WaypointTrigger
+          onEnter={this.toggleScrollUpButton.bind(this, false)}
+          onLeave={this.toggleScrollUpButton.bind(this, true)}
+        >
+          {() => <NavHeader/>}
+        </WaypointTrigger>
+        <ScrollUpButton show={this.state.showScrollUpButton}/>
         <Home/>
         {/*{this.props.children}*/}
-        <ScrollUpButton/>
         <Footer/>
         <Copyright/>
       </AppContainer>

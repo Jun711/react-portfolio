@@ -38,7 +38,7 @@ export default class WaypointTrigger extends Component {
         <Waypoint
           scrollableAncestor={window}
           topOffset={30}
-          bottomOffset={this.props.last? 0: 150}
+          bottomOffset={this.props.last? 0: 135}
           {...etcProps}
           onLeave={this.onLeave}
           onEnter={this.onEnter}/>
