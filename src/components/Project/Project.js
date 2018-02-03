@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  CloseButtonContainer, Content, DescContainer, DescGrid, DescItem, FixWidthProjContainer, InfoSet,
+  CloseButtonContainer, Content, DescContainer, DescGrid, DescItem, FixedWidthProjContainer, InfoSet,
   ProjectContainer, ProjectDetailContainer, ProjectImage, ProjectURL
 } from './Project.style';
 import FontAwButton from '../FontAwButton/FontAwButton';
@@ -19,12 +19,19 @@ class Project extends Component {
         justify={justifyContent}
       >
         <DescGrid>
-          {descLines}
-          {project.repoUrl &&
+          {project.googlePlayUrl &&
           <DescItem key={-1}>
             <ProjectURL
               target='_blank'
-              href={project.repoUrl}>Check out the <span>GitHub repo<i className='fa fa-github' aria-hidden='true'></i></span>
+              href={project.googlePlayUrl}>Download it on <span>Google Play<i className='fab fa-google-play' aria-hidden='true'/></span>
+            </ProjectURL>
+          </DescItem>}
+          {descLines}
+          {project.repoUrl &&
+          <DescItem key={-2}>
+            <ProjectURL
+              target='_blank'
+              href={project.repoUrl}>Check out the <span>GitHub repo<i className='fa fa-github' aria-hidden='true'/></span>
             </ProjectURL>
           </DescItem>}
         </DescGrid>
@@ -45,7 +52,7 @@ class Project extends Component {
             <FontAwButton
               class={'fa fa-times'}/>
           </CloseButtonContainer>
-          <FixWidthProjContainer>
+          <FixedWidthProjContainer>
             <h2>{title}</h2>
             <ProjectDetailContainer
               row
@@ -57,7 +64,7 @@ class Project extends Component {
               }
               <InfoSet>{this.renderProjectDesc(this.props.project, this.props.project.imageUrl)}</InfoSet>
             </ProjectDetailContainer>
-          </FixWidthProjContainer>
+          </FixedWidthProjContainer>
         </Content>
       </ProjectContainer>
     );

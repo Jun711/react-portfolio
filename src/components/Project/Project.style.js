@@ -1,16 +1,8 @@
 import styled, { css } from 'styled-components';
-import { Div, FixWidthFlexContainer, FixWidthRelContainer, Flex } from '../../theme/grid';
+import { Div, FixedWidthFlexContainer, FixedWidthRelContainer, Flex } from '../../theme/grid';
 import { UnderlineA } from '../../theme/animatedTags';
-import { blue, charcoal, orange, themeColor, white, yellow } from '../../theme/colors';
+import { themeColor, white } from '../../theme/colors';
 import { media } from '../../theme/media';
-
-export const ButtonFlex = styled(Flex)`
-  height: 4em;
-  width: 4em;
-  background-color: ${blue};
-  color: ${orange};
-   border-radius: 50%;
-`;
 
 export const ProjectContainer = styled.div`
   background-color: ${white};
@@ -32,23 +24,18 @@ export const ProjectContainer = styled.div`
   `}
 `;
 
-export const Content = styled(FixWidthRelContainer)``;
+export const Content = styled(FixedWidthRelContainer)``;
 
-export const FixWidthProjContainer = styled(FixWidthRelContainer)`
-  background-color: ${white};
+export const FixedWidthProjContainer = styled(FixedWidthRelContainer)`
   overflow: scroll;
   height: 100vh;
-  padding-top: 80px;
-  ${media.tablet`
-    padding-top: 55px;
-  `}
 `;
 
 export const CloseButtonContainer = styled.div`
   position: absolute;
   z-index: 101;
-  top: 60px;
-  right: 60px;
+  top: 35px;
+  right: 50px;
  
   ${media.tablet`
     top: 5px;
@@ -56,7 +43,7 @@ export const CloseButtonContainer = styled.div`
   `}
 `;
 
-export const ProjectDetailContainer = styled(FixWidthFlexContainer)`
+export const ProjectDetailContainer = styled(FixedWidthFlexContainer)`
   padding: 0;
   flex-wrap: wrap; 
   h3 {
@@ -67,7 +54,7 @@ export const ProjectDetailContainer = styled(FixWidthFlexContainer)`
 `;
 
 export const InfoSet = styled(Div)`
-  height: 700px;
+  height: 100vh;
   width: 450px;
   ${media.tablet`
     width: 300px;
@@ -81,36 +68,15 @@ export const InfoSet = styled(Div)`
   vertical-align: middle;
   position: relative; 
   display: block;   
-  
-  h3 {
-    // color: ${charcoal};
-  }
 `;
 
 export const ProjectImage = styled.img`
   border: 1px solid ${themeColor};
-  height: 600px;
+  height: 550px;
   width: 330px;
-  // ${media.larger`
-  //   height: 450px;
-  //   width: 250px;
-  // `}
-  // ${media.desktop`
-  //   height: 500px;
-  //   width: 220px;
-  // `}
-  // ${media.tablet`
-  //   height: 320px;
-  //   width: 170px;
-  // `}
-  // ${media.phone`
-  //   height: 500px;
-  //   width: 300px;
-  // `}
 `;
 
 export const DescContainer = styled(Flex)`
-  height: 600px;
   padding: 0;
   margin: 0;
   ${media.tablet`
@@ -118,13 +84,12 @@ export const DescContainer = styled(Flex)`
   `}
 `
 
-export const ProjectURL = styled(UnderlineA)`
-  font-size: 20px
-`;
+export const ProjectURL = styled(UnderlineA)``;
 
 export const DescItem = styled.li`
-  font-size: 20px;
   text-align: left;
 `;
 
-export const DescGrid = styled.ul``;
+export const DescGrid = styled.ul`
+  margin-top: 0px;
+`;
