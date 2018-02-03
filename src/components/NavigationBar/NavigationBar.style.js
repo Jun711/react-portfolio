@@ -10,7 +10,7 @@ export const NavigationContainer = styled(Flex)`
   right: 0;
   left: 0;
   top: 0;
-  height: ${({shrink}) => shrink? `60px` : `84px`};
+  height: ${({shrink}) => shrink ? `60px` : `84px`};
   z-index: 99;    
   background-color: ${themeColor};
   transition: height 0.3s ease-in-out;

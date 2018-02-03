@@ -21,35 +21,35 @@ export const UnderlineA = styled.a`
     content: '';
     height: 2px;
     width: 100%;
-    bottom: -5px;
+    bottom: 0px;
     left: 0;
     background: ${green};
     // transform-origin: 0%;
     transform: scaleX(0);
     transition: transform 0.3s ease-out;
   }
-   ${mediaBeyond.tablet`
-     &:hover { 
-        span:after {
-          transform: scaleX(1);
-          transition: transform 0.3s ease-out;   
-        } 
-        
-        i {
-          color: ${green}
-        } 
+  ${mediaBeyond.tablet`
+    &:hover { 
+      span:after {
+        transform: scaleX(1);
+        transition: transform 0.3s ease-out;   
+      } 
+      
+      i {
+        color: ${green}
+      } 
+    }
+  `}
+  ${media.tablet`
+    &:active { 
+      span:after {
+        transform: scaleX(1);
+        transition: transform 0.3s ease-out;   
+      } 
+      
+      i {
+        color: ${green}
+      } 
      }
-   `}
-   ${media.tablet`
-     &:active { 
-        span:after {
-          transform: scaleX(1);
-          transition: transform 0.3s ease-out;   
-        } 
-        
-        i {
-          color: ${green}
-        } 
-     }
-   `}
+  `}
 `;

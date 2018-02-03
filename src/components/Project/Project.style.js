@@ -29,6 +29,7 @@ export const Content = styled(FixedWidthRelContainer)``;
 export const FixedWidthProjContainer = styled(FixedWidthRelContainer)`
   overflow: scroll;
   height: 100vh;
+  padding-top: 25px;
 `;
 
 export const CloseButtonContainer = styled.div`
@@ -36,7 +37,6 @@ export const CloseButtonContainer = styled.div`
   z-index: 101;
   top: 35px;
   right: 50px;
- 
   ${media.tablet`
     top: 5px;
     right: 5px;

@@ -60,7 +60,7 @@ class TechnicalSkills extends Component {
         <Title
           h2
           icon='fa-code'
-          title='Skills'
+          title='Technical Skills'
         />
         <TechnicalSkillContainer
           row
