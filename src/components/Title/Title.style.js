@@ -1,30 +1,23 @@
 import styled, { css } from 'styled-components';
-import { Div } from '../../theme/grid';
+import { Div, Flex } from '../../theme/grid';
 import { green, white } from '../../theme/colors';
 import { media, mediaBeyond } from '../../theme/media';
 
-export const TitleContainer = styled(Div)`
+export const TitleContainer = styled(Flex)`
   span {
     padding: 0 7px;
-  }
-  
-  span {
     i:last-child {
       color: ${white};
     }
   }
   opacity: 0;   
   ${({trigger}) => trigger && css`
-    span {
-      i:last-child {
-        
-      }
-    }
     opacity: 1;
     transition: opacity 0.3s;
   `}
   
   ${mediaBeyond.tablet`
+    flex-direction: row;
     &:hover {
       span {
         i:last-child {
@@ -32,8 +25,12 @@ export const TitleContainer = styled(Div)`
         }
       }
     }
-  `}https://www.evernote.com/shard/s351/nl/167818999/fe170330-1be3-4979-bf52-15e608657163/
+  `}
   ${media.tablet`
+    flex-direction: column;
+    h2 {
+      margin-top: 0;
+    }
     &:active {
       span {
         i:last-child {

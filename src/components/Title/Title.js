@@ -9,6 +9,8 @@ class Title extends Component {
       <WaypointTrigger singleUse>
         {({trigger}) =>
           <TitleContainer
+            justify={'center'}
+            alignItems={'center'}
             trigger={trigger}
           >
             {this.props.h2 &&
