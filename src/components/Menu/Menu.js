@@ -24,7 +24,9 @@ class Menu extends Component {
     const menuSwitch = this.props.menuSwitch;
     return (
       <ComponentContainer>
-        <Container hide={!menuSwitch}>
+        <Container
+          shrink={this.props.shrink}
+          hide={!menuSwitch}>
           {this.renderMenu()}
         </Container>
       </ComponentContainer>

@@ -12,17 +12,17 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showScrollUpButton: false
+      navHeaderAni: false,
     }
   }
 
   componentDidMount() {
     Events.scrollEvent.register('begin', function () {
-      console.log('begin', arguments);
+      // console.log('begin', arguments);
     });
 
     Events.scrollEvent.register('end', function () {
-      console.log('end', arguments);
+      // console.log('end', arguments);
     });
 
     scrollSpy.update();
@@ -33,10 +33,10 @@ export default class App extends Component {
     Events.scrollEvent.remove('end');
   }
 
-  toggleScrollUpButton(toggle) {
+  toggleNavHeaderAni(toggle) {
     this.setState(
       {
-        showScrollUpButton: toggle
+        navHeaderAni: toggle
       }
     )
   }
@@ -45,12 +45,12 @@ export default class App extends Component {
     return (
       <AppContainer>
         <WaypointTrigger
-          onEnter={this.toggleScrollUpButton.bind(this, false)}
-          onLeave={this.toggleScrollUpButton.bind(this, true)}
+          onEnter={this.toggleNavHeaderAni.bind(this, false)}
+          onLeave={this.toggleNavHeaderAni.bind(this, true)}
         >
-          {() => <NavHeader/>}
+          {() => <NavHeader shrink={this.state.navHeaderAni}/>}
         </WaypointTrigger>
-        <ScrollUpButton show={this.state.showScrollUpButton}/>
+        <ScrollUpButton show={this.state.navHeaderAni}/>
         <Home/>
         {/*{this.props.children}*/}
         <Footer/>

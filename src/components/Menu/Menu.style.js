@@ -4,7 +4,7 @@ import { blue, themeColor, white } from '../../theme/colors';
 
 export const Container = styled(Flex)`
   color: ${blue};
-  top: 3em;
+  top: ${({shrink}) => shrink? `60px` : `76px`};
   position: fixed;
   width: 100vw;
   left: 0;
@@ -18,7 +18,7 @@ export const Container = styled(Flex)`
     margin-top: 25px;
   }
 
-  transition: transform 0.7s ease-in-out, opacity 1s linear;
+  transition: top 0.3s ease-in-out, transform 0.7s ease-in-out, opacity 1s linear;
   
   ${({hide}) => hide && css`
     opacity: 0;

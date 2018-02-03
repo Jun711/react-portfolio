@@ -28,6 +28,7 @@ class SwissBurger extends Component {
     return (
       <Div>
         <SwissBurgerHeader
+          shrink={this.props.shrink}
           row
           justify={'space-between'}
           alignItems={'center'}
@@ -50,6 +51,7 @@ class SwissBurger extends Component {
 
         </SwissBurgerHeader>
         <Menu
+          shrink={this.props.shrink}
           scrollConfig={this.props.scrollConfig}
           menuSwitch={this.state.menuSwitch}
         />

@@ -8,6 +8,7 @@ export default class WaypointTrigger extends Component {
   }
 
   onEnter = ({ event }) => {
+    // console.log('onEnter? ')
     const { onEnter } = this.props;
     if (onEnter) {
       onEnter();
@@ -19,6 +20,7 @@ export default class WaypointTrigger extends Component {
   };
 
   onLeave = () => {
+    // console.log('onLeave? ')
     const {onLeave} = this.props;
     if (onLeave) {
       onLeave();
@@ -37,7 +39,7 @@ export default class WaypointTrigger extends Component {
       <div>
         <Waypoint
           scrollableAncestor={window}
-          topOffset={30}
+          topOffset={0}
           bottomOffset={this.props.last? 0: 135}
           {...etcProps}
           onLeave={this.onLeave}

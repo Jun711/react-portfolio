@@ -7,6 +7,7 @@ class NavigationBar extends Component {
   render() {
     return (
       <NavigationContainer
+        shrink={this.props.shrink}
         row
         justify={'space-between'}
         alignItems={'center'}

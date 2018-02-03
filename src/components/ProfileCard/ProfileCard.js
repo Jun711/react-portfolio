@@ -7,14 +7,11 @@ class ProfileCard extends Component {
 
   render() {
     return (
-      <Container>
         <ProfileContainer
           column
-          justify={'f'}
+          justify={'flex-start'}
           alignItems={'center'}
         >
-          {/*<h1>Jun Goh</h1>*/}
-          {/*<h3>Software Developer</h3>*/}
           <ProfileImageContainer
             row
             justify={'center'}
@@ -26,7 +23,6 @@ class ProfileCard extends Component {
           </ProfileImageContainer>
           <Network doBounce={true}/>
         </ProfileContainer>
-      </Container>
     )
   }
 }

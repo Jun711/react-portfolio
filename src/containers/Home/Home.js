@@ -43,7 +43,6 @@ export default class Home extends Component {
         <Element name='contact'>
           <Contact/>
         </Element>
-
         {this.props.children}
       </HomeContainer>
     );
