@@ -31,8 +31,10 @@ export const ComponentContainer = styled(Div)`
 `;
 
 export const ListItem = styled.li`
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1em;
+  line-height: 1em;
+  text-align: center;
+  vertical-align: middle;
   background: ${themeColor};
   text-decoration: none;  
   border-bottom: 1px solid black;
@@ -42,6 +44,7 @@ export const ListItem = styled.li`
     border-bottom: 0;
   }
   & > a {
+    font-size: 1em;
     color: ${white};
     cursor: pointer;
     text-decoration: none;

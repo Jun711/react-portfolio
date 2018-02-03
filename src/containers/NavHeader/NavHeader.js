@@ -15,7 +15,7 @@ export default class NavHeader extends Component {
 
     const scrollConfigTablet = {
       activeClass: 'active',
-      offset: -341,
+      offset: -316,
       smooth: 'easeInOutQuad',
       duration: 700
     };
