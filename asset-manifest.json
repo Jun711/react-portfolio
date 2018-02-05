@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.65027555.css",
   "main.css.map": "static/css/main.65027555.css.map",
-  "main.js": "static/js/main.0b1b64c0.js",
-  "main.js.map": "static/js/main.0b1b64c0.js.map",
+  "main.js": "static/js/main.0232adf5.js",
+  "main.js.map": "static/js/main.0232adf5.js.map",
   "static/media/adblocker.png": "static/media/adblocker.8bd89b32.png",
   "static/media/axis-cover-1.jpeg": "static/media/axis-cover-1.bfaace45.jpeg",
   "static/media/axis-cover.jpeg": "static/media/axis-cover.059888c0.jpeg",
@@ -22,6 +22,7 @@
   "static/media/language-cover2.jpg": "static/media/language-cover2.2a5db849.jpg",
   "static/media/portfolio-cover.jpg": "static/media/portfolio-cover.628e914c.jpg",
   "static/media/portfolio.jpg": "static/media/portfolio.af2a3304.jpg",
+  "static/media/profile-pic.jpeg": "static/media/profile-pic.70767551.jpeg",
   "static/media/rpc-cover.jpg": "static/media/rpc-cover.c7cc5c88.jpg",
   "static/media/server-cover.jpg": "static/media/server-cover.2539532b.jpg",
   "static/media/shopping-cover.jpeg": "static/media/shopping-cover.5ba30b2d.jpeg",
