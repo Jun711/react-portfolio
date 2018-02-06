@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ComponentContainer, Container, List, ListItem } from './Menu.style';
 import { menu } from './MenuItems'
 import { Link } from 'react-scroll';
+import PropTypes from 'prop-types';
 
 class Menu extends Component {
   renderMenu() {
@@ -32,6 +33,12 @@ class Menu extends Component {
       </ComponentContainer>
     );
   }
+}
+
+Menu.propTypes = {
+  scrollConfig: PropTypes.object,
+  menuSwitch: PropTypes.bool,
+  shrink: PropTypes.bool,
 }
 
 export default Menu;

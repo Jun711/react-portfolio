@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TitleContainer } from './Title.style';
 import FontAwButton from '../FontAwButton/FontAwButton';
 import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
+import PropTypes from 'prop-types';
 
 class Title extends Component {
   render() {
@@ -30,6 +31,11 @@ class Title extends Component {
       </WaypointTrigger>
     )
   }
+}
+
+Title.propTypes = {
+  h2: PropTypes.bool,
+  h4: PropTypes.bool,
 }
 
 export default Title;

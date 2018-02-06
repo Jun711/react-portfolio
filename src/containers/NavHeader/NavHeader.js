@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import SwissBurger from '../../components/SwissBurger/SwissBurger';
 import { NavContainer } from './NavHeader.style';
+import PropTypes from 'prop-types';
 
-export default class NavHeader extends Component {
+class NavHeader extends Component {
   render() {
     const scrollConfigBeyondTablet = {
       activeClass: 'active',
@@ -14,7 +15,6 @@ export default class NavHeader extends Component {
     };
 
     const scrollConfigTablet = {
-      activeClass: 'active',
       offset: this.props.shrink ? -304 : -320,
       smooth: 'easeInOutQuad',
       duration: 700
@@ -28,3 +28,9 @@ export default class NavHeader extends Component {
     );
   }
 }
+
+NavHeader.propTypes = {
+  shrink: PropTypes.bool,
+}
+
+export default NavHeader;

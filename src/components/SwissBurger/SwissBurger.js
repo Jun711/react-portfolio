@@ -3,6 +3,7 @@ import { BurgerSlice, SwissBurgerBun, SwissBurgerHeader } from './SwissBurger.st
 import Menu from '../Menu/Menu';
 import { Div, Flex } from '../../theme/grid';
 import Name from '../Name/Name';
+import PropTypes from 'prop-types';
 
 class SwissBurger extends Component {
   constructor(props) {
@@ -58,6 +59,12 @@ class SwissBurger extends Component {
       </Div>
     );
   }
+}
+
+SwissBurger.propTypes = {
+  shrink: PropTypes.bool,
+  scrollConfig: PropTypes.object,
+  menuSwitch: PropTypes.bool,
 }
 
 export default SwissBurger

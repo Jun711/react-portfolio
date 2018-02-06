@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavigationContainer, NavItem, NavItemA } from './NavigationBar.style';
 import { Flex } from '../../theme/grid';
 import Name from '../Name/Name';
+import PropTypes from 'prop-types';
 
 class NavigationBar extends Component {
   render() {
@@ -27,6 +28,11 @@ class NavigationBar extends Component {
       </NavigationContainer>
     );
   }
+}
+
+NavigationBar.propTypes = {
+  scrollConfig: PropTypes.object,
+  shrink: PropTypes.bool
 }
 
 export default NavigationBar

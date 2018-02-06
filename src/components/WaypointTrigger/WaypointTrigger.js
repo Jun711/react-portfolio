@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Waypoint from 'react-waypoint';
+import PropTypes from 'prop-types';
 
 export default class WaypointTrigger extends Component {
   constructor(props) {
@@ -8,7 +9,6 @@ export default class WaypointTrigger extends Component {
   }
 
   onEnter = ({ event }) => {
-    // console.log('onEnter? ')
     const { onEnter } = this.props;
     if (onEnter) {
       onEnter();
@@ -49,3 +49,12 @@ export default class WaypointTrigger extends Component {
     );
   }
 }
+
+WaypointTrigger.propTypes = {
+  last: PropTypes.bool,
+  onEnter: PropTypes.func,
+  onLeave: PropTypes.func,
+  onLeaveEffect: PropTypes.bool,
+  singleUse: PropTypes.bool,
+}
+

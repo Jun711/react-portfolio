@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {  FontAwSpan } from './FontAwButton.style'
+import { FontAwSpan } from './FontAwButton.style';
+import PropTypes from 'prop-types';
 
 class FontAwButton extends Component {
 
@@ -29,4 +30,10 @@ class FontAwButton extends Component {
   }
 }
 
+FontAwButton.propTypes = {
+  class: PropTypes.string,
+  size: PropTypes.string,
+}
+
 export default FontAwButton;
+

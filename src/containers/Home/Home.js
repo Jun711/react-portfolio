@@ -7,6 +7,7 @@ import Contact from '../../components/Contact/Contact';
 import About from '../../components/About/About';
 import { Element } from 'react-scroll';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
+import PropTypes from 'prop-types';
 
 export default class Home extends Component {
   static propTypes = {}
@@ -47,4 +48,8 @@ export default class Home extends Component {
       </HomeContainer>
     );
   }
+}
+
+Home.propTypes = {
+  children: PropTypes.node,
 }

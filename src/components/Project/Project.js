@@ -4,6 +4,7 @@ import {
   ProjectContainer, ProjectDetailContainer, ProjectImage, ProjectURL
 } from './Project.style';
 import FontAwButton from '../FontAwButton/FontAwButton';
+import PropTypes from 'prop-types';
 
 class Project extends Component {
 
@@ -69,6 +70,12 @@ class Project extends Component {
       </ProjectContainer>
     );
   }
+}
+
+Project.propTypes = {
+  project: PropTypes.object,
+  closeProject: PropTypes.func,
+  projectSwitch: PropTypes.bool,
 }
 
 export default Project;

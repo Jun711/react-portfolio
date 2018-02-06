@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NetworkContainer, SocialMediaA } from './Network.style';
 import { socialMediaItems } from './SocialMedia.data';
+import PropTypes from 'prop-types';
 
 class Network extends Component {
 
@@ -29,6 +30,10 @@ class Network extends Component {
       </NetworkContainer>
     );
   }
+}
+
+Network.propTypes = {
+  doBounce: PropTypes.bool,
 }
 
 export default Network

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ScrollUpButtonContainer } from './ScrollUpButton.style';
 import { animateScroll } from 'react-scroll';
 import FontAwButton from '../FontAwButton/FontAwButton';
+import PropTypes from 'prop-types';
 
 class ScrollUpButton extends Component {
   scrollToTop() {
@@ -18,6 +19,10 @@ class ScrollUpButton extends Component {
       </ScrollUpButtonContainer>
     );
   }
+}
+
+ScrollUpButton.propTypes = {
+  show: PropTypes.bool,
 }
 
 export default ScrollUpButton;

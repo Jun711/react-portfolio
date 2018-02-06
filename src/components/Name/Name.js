@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NameContainer, NameLink } from './Name.style';
+import PropTypes from 'prop-types';
 
 class Name extends Component {
   render() {
@@ -15,7 +16,10 @@ class Name extends Component {
       </NameContainer>
     )
   }
+}
 
+Name.propTypes = {
+  scrollConfig: PropTypes.object,
 }
 
 export default Name;
