@@ -8,7 +8,7 @@ class Menu extends Component {
   renderMenu() {
     const menuItems = menu.map((menuItem) =>
       <ListItem key={menuItem.key}>
-        {menuItem.file && <a target='_blank' href={process.env.PUBLIC_URL + `${menuItem.file}`}>{menuItem.item}</a>}
+        {menuItem.file && <a target='_blank' href={require(`../../assets/docs/${menuItem.file}`)}>{menuItem.item}</a>}
         {menuItem.link && <a target='_blank' href={menuItem.link}>{menuItem.item}</a>}
         {!menuItem.link && !menuItem.file &&
         <Link {...this.props.scrollConfig} to={menuItem.key}>{menuItem.item}</Link>}

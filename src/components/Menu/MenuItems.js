@@ -14,7 +14,7 @@ export const menu = [
   {
     'key': 'resume',
     'item': 'Resume',
-    'file': '/JunResume.pdf'
+    'file': 'JunResume.pdf'
   },
   {
     'key': 'blog',
