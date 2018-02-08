@@ -9,10 +9,21 @@ class SwissBurger extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      bar1: false,
-      bar2: false,
-      bar3: false,
-      menuSwitch: false,
+      bar1: this.props.burgerMenuSwitch || false,
+      bar2: this.props.burgerMenuSwitch || false,
+      bar3: this.props.burgerMenuSwitch || false,
+      menuSwitch: this.props.burgerMenuSwitch || false,
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.state.menuSwitch && !nextProps.burgerMenuSwitch) {
+      this.setState({
+        bar1: nextProps.burgerMenuSwitch,
+        bar2: nextProps.burgerMenuSwitch,
+        bar3: nextProps.burgerMenuSwitch,
+        menuSwitch: nextProps.burgerMenuSwitch,
+      })
     }
   }
 
@@ -21,7 +32,7 @@ class SwissBurger extends Component {
       bar1: !this.state.bar1,
       bar2: !this.state.bar2,
       bar3: !this.state.bar3,
-      menuSwitch: !this.state.menuSwitch
+      menuSwitch: !this.state.menuSwitch,
     })
   }
 
@@ -64,7 +75,7 @@ class SwissBurger extends Component {
 SwissBurger.propTypes = {
   shrink: PropTypes.bool,
   scrollConfig: PropTypes.object,
-  menuSwitch: PropTypes.bool,
+  burgerMenuSwitch: PropTypes.bool,
 }
 
 export default SwissBurger

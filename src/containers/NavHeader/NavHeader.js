@@ -23,7 +23,8 @@ class NavHeader extends Component {
     return (
       <NavContainer>
         <NavigationBar shrink={this.props.shrink} scrollConfig={scrollConfigBeyondTablet}/>
-        <SwissBurger shrink={this.props.shrink} scrollConfig={scrollConfigTablet}/>
+        <SwissBurger burgerMenuSwitch={this.props.burgerMenuSwitch} shrink={this.props.shrink}
+                     scrollConfig={scrollConfigTablet}/>
       </NavContainer>
     );
   }
@@ -31,6 +32,7 @@ class NavHeader extends Component {
 
 NavHeader.propTypes = {
   shrink: PropTypes.bool,
+  burgerMenuSwitch: PropTypes.bool,
 }
 
 export default NavHeader;

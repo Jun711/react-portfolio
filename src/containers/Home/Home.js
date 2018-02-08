@@ -27,7 +27,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <HomeContainer>
+      <HomeContainer
+        onClick={this.props.closeSwissBurgerMenu}
+      >
         <Element name='profileCard'>
           <ProfileCard/>
         </Element>
@@ -52,4 +54,5 @@ export default class Home extends Component {
 
 Home.propTypes = {
   children: PropTypes.node,
+  closeSwissBurgerMenu: PropTypes.func,
 }

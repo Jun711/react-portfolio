@@ -13,6 +13,7 @@ export default class App extends Component {
     super(props);
     this.state = {
       navHeaderAni: false,
+      burgerMenuSwitch: false,
     }
   }
 
@@ -41,6 +42,14 @@ export default class App extends Component {
     )
   }
 
+  closeSwissBurgerMenu() {
+    this.setState(
+      {
+        burgerMenuSwitch: false
+      }
+    )
+  }
+
   render() {
     return (
       <AppContainer>
@@ -48,10 +57,10 @@ export default class App extends Component {
           onEnter={this.toggleNavHeaderAni.bind(this, false)}
           onLeave={this.toggleNavHeaderAni.bind(this, true)}
         >
-          {() => <NavHeader shrink={this.state.navHeaderAni}/>}
+          {() => <NavHeader burgerMenuSwitch={this.state.burgerMenuSwitch} shrink={this.state.navHeaderAni}/>}
         </WaypointTrigger>
         <ScrollUpButton show={this.state.navHeaderAni}/>
-        <Home/>
+        <Home closeSwissBurgerMenu={this.closeSwissBurgerMenu.bind(this)}/>
         {/*{this.props.children}*/}
         <Footer/>
         <Copyright/>
