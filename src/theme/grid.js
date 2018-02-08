@@ -25,23 +25,6 @@ export const Wrapper = styled(Div)`
   margin-bottom: 3.5em;
 `;
 
-export const Container = styled(Div)`
-  width: 100%;
-  right: 0;
-  left: 0;
-  margin-top: 3.5em;
-  ${media.tablet`
-    margin-top: 3em;;  
-    right: 0;
-    left: 0;
-  `}
-  ${media.phone`  
-    margin-top: 3em;;  
-    right: 0;
-    left: 0;
-  `}   
-`;
-
 export const Relative = styled(Div)`
   position: relative;
 `;

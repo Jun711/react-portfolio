@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container } from '../../theme/grid';
 import { ProfileContainer, ProfileImage, ProfileImageContainer } from './ProfileCard.style';
 import Network from '../SocialMedia/Network';
 
@@ -7,22 +6,22 @@ class ProfileCard extends Component {
 
   render() {
     return (
-        <ProfileContainer
-          column
-          justify={'flex-start'}
-          alignItems={'center'}
+      <ProfileContainer
+        column
+        justify={'flex-start'}
+        alignItems={'center'}
+      >
+        <ProfileImageContainer
+          row
+          justify={'center'}
         >
-          <ProfileImageContainer
-            row
-            justify={'center'}
-          >
-            <ProfileImage
-              alt="Jun\'s photo"
-              src={require('../../assets/img/rpc-cover.jpg')}
-            />
-          </ProfileImageContainer>
-          <Network doBounce={true}/>
-        </ProfileContainer>
+          <ProfileImage
+            alt="Jun\'s photo"
+            src={require('../../assets/img/profile-pic.jpeg')}
+          />
+        </ProfileImageContainer>
+        <Network doBounce={true}/>
+      </ProfileContainer>
     )
   }
 }

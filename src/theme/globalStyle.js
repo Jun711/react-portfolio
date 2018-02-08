@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import { themeColor } from "./colors";
+import { themeColor } from './colors';
 
 /* eslint-disabled */
 injectGlobal`
@@ -54,7 +54,7 @@ injectGlobal`
   }
   
   li, a {
-    letter-spacing: 0.09em;
+    letter-spacing: 0.095em;
     line-height: 2em;
     font-size: 17px;
   }

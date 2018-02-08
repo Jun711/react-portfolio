@@ -40,18 +40,11 @@ export const BurgerSlice = styled(Div)`
       background-color: ${white};
       margin: 6px 0;
       transition: 0.4s ease-in-out;
-      // &:hover {
-      //   background-color: ${green}
-      // }
-      // &:active {
-      //   // color: ${green}
-      //   background-color: ${green}
-      // }
       
       ${({bar1}) => bar1 && css`
         background-color: ${green};
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-        transform: rotate(-45deg) translate(-9px, 6px);
+        -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+        transform: rotate(-45deg) translate(-8px, 7px);
       `}
     
       ${({bar2}) => bar2 && css`

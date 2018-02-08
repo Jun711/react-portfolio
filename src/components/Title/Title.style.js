@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Div, Flex } from '../../theme/grid';
+import { Flex } from '../../theme/grid';
 import { green, white } from '../../theme/colors';
 import { media, mediaBeyond } from '../../theme/media';
 

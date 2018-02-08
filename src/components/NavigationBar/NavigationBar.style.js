@@ -22,15 +22,13 @@ export const NavigationContainer = styled(Flex)`
 
 export const NavItem = styled(Link)`
   margin-right: 20px;
-  
   font-size: 24px;
   line-height: 24px;
   cursor: pointer;
   color: ${white};  
-  
   position: relative;
-  
   text-decoration: none;
+  
   ${mediaBeyond.tablet`
     &:hover {
       color: ${green};
