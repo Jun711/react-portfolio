@@ -10,7 +10,7 @@ class Contact extends Component {
       <WaypointTrigger singleUse key={index}>
         {({trigger}) =>
           <Line className={trigger ? 'inViewAppear' : null}>
-            <ContactURL href={contact.link}>{contact.actionText}
+            <ContactURL target='_blank' href={contact.link}>{contact.actionText}
               <span>
                 <i className={contact.icon} aria-hidden='true'/>
                 {contact.linkText}
