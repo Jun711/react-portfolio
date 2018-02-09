@@ -10,6 +10,7 @@ export const Title = styled.h1`
 `;
 
 export const ProjectWrapper = styled(Wrapper)`
+  margin-top: 1em;
 `;
 
 export const ProjectContainer = styled(Grid)`

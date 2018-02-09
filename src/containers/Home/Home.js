@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { HomeContainer } from './Home.style';
+import Greetings from '../../components/Greetings/Greetings';
 import Experience from '../../components/Experience/Experience';
 import TechnicalSkills from '../../components/TechnicalSkills/TechnicalSkills';
 import ProjectGrid from '../../components/ProjectGrid/ProjectGrid';
@@ -33,6 +34,7 @@ export default class Home extends Component {
         <Element name='profileCard'>
           <ProfileCard/>
         </Element>
+        <Greetings/>
         <Element name='projects'>
           <ProjectGrid/>
         </Element>
