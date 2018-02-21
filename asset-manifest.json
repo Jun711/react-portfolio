@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.65027555.css",
   "main.css.map": "static/css/main.65027555.css.map",
-  "main.js": "static/js/main.3e6f0516.js",
-  "main.js.map": "static/js/main.3e6f0516.js.map",
+  "main.js": "static/js/main.7fe647af.js",
+  "main.js.map": "static/js/main.7fe647af.js.map",
   "static/media/JunResume.pdf": "static/media/JunResume.2b4c0b2b.pdf",
   "static/media/adblocker.png": "static/media/adblocker.8bd89b32.png",
   "static/media/axis-cover-1.jpeg": "static/media/axis-cover-1.bfaace45.jpeg",
@@ -28,5 +28,6 @@
   "static/media/server-cover.jpg": "static/media/server-cover.2539532b.jpg",
   "static/media/shopping-cover.jpeg": "static/media/shopping-cover.5ba30b2d.jpeg",
   "static/media/tracking-cover.jpg": "static/media/tracking-cover.f652fe3e.jpg",
-  "static/media/tracking.jpg": "static/media/tracking.8b2f588d.jpg"
+  "static/media/tracking.jpg": "static/media/tracking.8b2f588d.jpg",
+  "static/media/webpage-cover.jpg": "static/media/webpage-cover.628e914c.jpg"
 }
