@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NetworkContainer, SocialMediaA } from './Network.style';
-import { socialMediaItems } from './SocialMedia.data';
+import { socialMediaItems } from '../../assets/data/SocialMedia.data';
 import PropTypes from 'prop-types';
 
 class Network extends Component {

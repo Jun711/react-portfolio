@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { GreetingContainer, GreetingWrapper } from './Greetings.style';
-import { greetingLines } from './GreetingItems.data.js';
+import { greetingLines } from '../../assets/data/GreetingItems.data.js';
 
 class Greetings extends Component {
   constructor(props) {

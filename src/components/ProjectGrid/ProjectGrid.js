@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ProjectContainer, ProjectCover, ProjectItem, ProjectWrapper } from './ProjectGrid.style';
 import Project from '../Project/Project';
-import { projects } from './Projects.data'
+import { projects } from '../../assets/data/Projects.data'
 import Title from '../Title/Title';
 import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 

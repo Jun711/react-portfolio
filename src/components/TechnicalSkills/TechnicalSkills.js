@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ListGrid, ListItem, SkillSet, TechnicalSkillContainer, TechnicalSkillWrapper } from './TechnicalSkills.style';
-import { backendDev, mobileDev, webDev } from './Dev.data';
-import { tools } from './Tools.data';
+import { backendDev, mobileDev, webDev } from '../../assets/data/Dev.data';
+import { tools } from '../../assets/data/Tools.data';
 import Title from '../Title/Title';
 import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 

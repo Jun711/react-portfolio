@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AboutMeContainer, AboutWrapper, List, ListItem } from './About.style';
-import { aboutMeItems } from './AboutMeItems.data.js';
+import { aboutMeItems } from '../../assets/data/AboutMeItems.data.js';
 import Title from '../Title/Title';
 import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
 

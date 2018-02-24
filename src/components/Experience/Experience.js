@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ExperienceContainer, ExperienceWrapper } from './Experience.style';
 import ExperienceItem from './ExperienceItem/ExperienceItem'
-import { experienceItems } from './ExperienceItem/ExperienceItemDes.data';
+import { experienceItems } from '../../assets/data/ExperienceItemDes.data';
 import Title from '../Title/Title';
 
 class Experience extends Component {

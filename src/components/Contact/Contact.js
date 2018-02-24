@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ContactURL, ContactWrapper, Line } from './Contact.style'
 import Title from '../Title/Title';
 import WaypointTrigger from '../WaypointTrigger/WaypointTrigger';
-import { contactData } from './Contact.data';
+import { contactData } from '../../assets/data/Contact.data';
 
 class Contact extends Component {
   renderContact() {
